@@ -12,13 +12,72 @@ function getDbClient() {
   return createClient({ url, authToken })
 }
 
-function parseJsonField(value: string | null): any {
+function parseJsonField(value: string | null): unknown {
   if (!value) return null
   try {
     return JSON.parse(value)
   } catch {
     return value
   }
+}
+
+interface SaveArgs {
+  session_id: string
+  meeting_date?: string
+  title?: string
+  video_title?: string
+  participants?: string[]
+  topics?: string[]
+  decisions?: string[]
+  pending_actions?: string[]
+  important_points?: string[]
+  voting_records?: string[]
+  follow_up_to?: string
+  whatsapp_summary: string
+}
+
+interface UpdateArgs {
+  session_id: string
+  updates: {
+    meeting_date?: string
+    title?: string
+    video_title?: string
+    participants?: string[]
+    topics?: string[]
+    decisions?: string[]
+    pending_actions?: string[]
+    important_points?: string[]
+    voting_records?: string[]
+    follow_up_to?: string
+    whatsapp_summary?: string
+  }
+}
+
+interface DeleteArgs {
+  session_id: string
+}
+
+interface GetArgs {
+  id: number
+}
+
+interface SearchArgs {
+  query: string
+  limit?: number
+}
+
+interface TimelineArgs {
+  limit?: number
+  offset?: number
+}
+
+interface FollowupArgs {
+  title: string
+  transcript: string
+}
+
+interface SuggestTopicArgs {
+  transcript: string
 }
 
 export default defineTools([
@@ -29,7 +88,7 @@ export default defineTools([
       type: 'object',
       properties: {
         session_id: { type: 'string', description: 'Unique session identifier (e.g., DOPM-01-2026)' },
-        meeting_date: { type: 'string', description: 'Date of the meeting (ISO format or natural language)' },
+        meeting_date: { type: 'string', description: 'Date of the meeting' },
         title: { type: 'string', description: 'Meeting title' },
         video_title: { type: 'string', description: 'Original video title' },
         participants: { type: 'array', items: { type: 'string' }, description: 'List of participant names' },
@@ -43,11 +102,12 @@ export default defineTools([
       },
       required: ['session_id', 'whatsapp_summary'],
     },
-    handler: async (args, context, struere, fetch) => {
+    handler: async (args, _context, _struere, _fetch) => {
+      const a = args as unknown as SaveArgs
       const db = getDbClient()
-      const whatsappSummary = args.whatsapp_summary.length > MAX_SUMMARY_LENGTH
-        ? args.whatsapp_summary.substring(0, MAX_SUMMARY_LENGTH)
-        : args.whatsapp_summary
+      const whatsappSummary = a.whatsapp_summary.length > MAX_SUMMARY_LENGTH
+        ? a.whatsapp_summary.substring(0, MAX_SUMMARY_LENGTH)
+        : a.whatsapp_summary
 
       const result = await db.execute({
         sql: `INSERT INTO meetings (
@@ -56,17 +116,17 @@ export default defineTools([
           follow_up_to, whatsapp_summary
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         args: [
-          args.session_id,
-          args.meeting_date || null,
-          args.title || null,
-          args.video_title || null,
-          JSON.stringify(args.participants || []),
-          JSON.stringify(args.topics || []),
-          JSON.stringify(args.decisions || []),
-          JSON.stringify(args.pending_actions || []),
-          JSON.stringify(args.important_points || []),
-          JSON.stringify(args.voting_records || []),
-          args.follow_up_to || null,
+          a.session_id,
+          a.meeting_date || null,
+          a.title || null,
+          a.video_title || null,
+          JSON.stringify(a.participants || []),
+          JSON.stringify(a.topics || []),
+          JSON.stringify(a.decisions || []),
+          JSON.stringify(a.pending_actions || []),
+          JSON.stringify(a.important_points || []),
+          JSON.stringify(a.voting_records || []),
+          a.follow_up_to || null,
           whatsappSummary,
         ],
       })
@@ -101,12 +161,13 @@ export default defineTools([
       },
       required: ['session_id', 'updates'],
     },
-    handler: async (args, context, struere, fetch) => {
+    handler: async (args, _context, _struere, _fetch) => {
+      const a = args as unknown as UpdateArgs
       const db = getDbClient()
       const sets: string[] = ['updated_at = datetime(\'now\')']
-      const sqlArgs: any[] = []
+      const sqlArgs: (string | null)[] = []
 
-      const u = args.updates
+      const u = a.updates
       if (u.meeting_date !== undefined) { sets.push('meeting_date = ?'); sqlArgs.push(u.meeting_date) }
       if (u.title !== undefined) { sets.push('title = ?'); sqlArgs.push(u.title) }
       if (u.video_title !== undefined) { sets.push('video_title = ?'); sqlArgs.push(u.video_title) }
@@ -122,7 +183,7 @@ export default defineTools([
         sets.push('whatsapp_summary = ?'); sqlArgs.push(trimmed)
       }
 
-      sqlArgs.push(args.session_id)
+      sqlArgs.push(a.session_id)
       await db.execute({
         sql: `UPDATE meetings SET ${sets.join(', ')} WHERE session_id = ? AND archived_at IS NULL`,
         args: sqlArgs,
@@ -141,11 +202,12 @@ export default defineTools([
       },
       required: ['session_id'],
     },
-    handler: async (args, context, struere, fetch) => {
+    handler: async (args, _context, _struere, _fetch) => {
+      const a = args as unknown as DeleteArgs
       const db = getDbClient()
       await db.execute({
         sql: `UPDATE meetings SET archived_at = datetime('now'), updated_at = datetime('now') WHERE session_id = ? AND archived_at IS NULL`,
-        args: [args.session_id],
+        args: [a.session_id],
       })
       return { archived: true }
     },
@@ -161,28 +223,29 @@ export default defineTools([
       },
       required: ['id'],
     },
-    handler: async (args, context, struere, fetch) => {
+    handler: async (args, _context, _struere, _fetch) => {
+      const a = args as unknown as GetArgs
       const db = getDbClient()
       const result = await db.execute({
         sql: `SELECT * FROM meetings WHERE id = ? AND archived_at IS NULL`,
-        args: [args.id],
+        args: [a.id],
       })
       if (!result.rows || result.rows.length === 0) {
         return { error: 'Summary not found' }
       }
-      const row = result.rows[0] as any
+      const row = result.rows[0] as Record<string, unknown>
       return {
         id: row.id,
         session_id: row.session_id,
         meeting_date: row.meeting_date,
         title: row.title,
         video_title: row.video_title,
-        participants: parseJsonField(row.participants),
-        topics: parseJsonField(row.topics),
-        decisions: parseJsonField(row.decisions),
-        pending_actions: parseJsonField(row.pending_actions),
-        important_points: parseJsonField(row.important_points),
-        voting_records: parseJsonField(row.voting_records),
+        participants: parseJsonField(row.participants as string | null),
+        topics: parseJsonField(row.topics as string | null),
+        decisions: parseJsonField(row.decisions as string | null),
+        pending_actions: parseJsonField(row.pending_actions as string | null),
+        important_points: parseJsonField(row.important_points as string | null),
+        voting_records: parseJsonField(row.voting_records as string | null),
         follow_up_to: row.follow_up_to,
         whatsapp_summary: row.whatsapp_summary,
         created_at: row.created_at,
@@ -201,15 +264,16 @@ export default defineTools([
       },
       required: ['transcript'],
     },
-    handler: async (args, context, struere, fetch) => {
-      const text = args.transcript
+    handler: async (args, _context, _struere, _fetch) => {
+      const a = args as unknown as SuggestTopicArgs
+      const text = a.transcript
       const stopWords = new Set(['el', 'la', 'los', 'las', 'un', 'una', 'de', 'del', 'al', 'en', 'con', 'por', 'para', 'sin', 'sobre', 'entre', 'es', 'son', 'fue', 'eran', 'se', 'le', 'lo', 'que', 'y', 'o', 'a', 'como'])
       const words = text.toLowerCase().replace(/[^\w\sáéíóúñ]/g, '').split(/\s+/)
       const freq: Record<string, number> = {}
       for (const w of words) {
         if (w.length > 3 && !stopWords.has(w)) freq[w] = (freq[w] || 0) + 1
       }
-      const sorted = Object.entries(freq).sort((a, b) => b[1] - a[1])
+      const sorted = Object.entries(freq).sort(([, a], [, b]) => b - a)
       const topics = sorted.slice(0, 10).map(([word]) => word)
       return { topics }
     },
@@ -226,24 +290,26 @@ export default defineTools([
       },
       required: ['query'],
     },
-    handler: async (args, context, struere, fetch) => {
+    handler: async (args, _context, _struere, _fetch) => {
+      const a = args as unknown as SearchArgs
       const db = getDbClient()
-      const limit = args.limit || 20
+      const limit = a.limit || 20
       const result = await db.execute({
-        sql: `SELECT m.* FROM meetings_fts fts
+        sql: `SELECT m.id, m.session_id, m.meeting_date, m.title, m.participants, m.topics
+          FROM meetings_fts fts
           JOIN meetings m ON m.id = fts.rowid
           WHERE meetings_fts MATCH ? AND m.archived_at IS NULL
           ORDER BY rank
           LIMIT ?`,
-        args: [args.query, limit],
+        args: [a.query, limit] as (string | number)[],
       })
-      return (result.rows || []).map((row: any) => ({
+      return (result.rows || []).map((row: Record<string, unknown>) => ({
         id: row.id,
         session_id: row.session_id,
         meeting_date: row.meeting_date,
         title: row.title,
-        participants: parseJsonField(row.participants),
-        topics: parseJsonField(row.topics),
+        participants: parseJsonField(row.participants as string | null),
+        topics: parseJsonField(row.topics as string | null),
       }))
     },
   },
@@ -258,19 +324,20 @@ export default defineTools([
         offset: { type: 'number', description: 'Offset for pagination (default 0)' },
       },
     },
-    handler: async (args, context, struere, fetch) => {
+    handler: async (args, _context, _struere, _fetch) => {
+      const a = args as TimelineArgs
       const db = getDbClient()
-      const limit = args.limit || 10
-      const offset = args.offset || 0
+      const limit = a.limit || 10
+      const offset = a.offset || 0
       const result = await db.execute({
         sql: `SELECT id, session_id, meeting_date, title, follow_up_to, created_at
           FROM meetings
           WHERE archived_at IS NULL
           ORDER BY meeting_date DESC, created_at DESC
           LIMIT ? OFFSET ?`,
-        args: [limit, offset],
+        args: [limit, offset] as (string | number)[],
       })
-      return (result.rows || []).map((row: any) => ({
+      return (result.rows || []).map((row: Record<string, unknown>) => ({
         id: row.id,
         session_id: row.session_id,
         meeting_date: row.meeting_date,
@@ -292,9 +359,10 @@ export default defineTools([
       },
       required: ['title', 'transcript'],
     },
-    handler: async (args, context, struere, fetch) => {
+    handler: async (args, _context, _struere, _fetch) => {
+      const a = args as unknown as FollowupArgs
       const pattern = /\w{1,4}-\d+-\d{4}/
-      const combinedText = `${args.title} ${args.transcript}`
+      const combinedText = `${a.title} ${a.transcript}`
       const matches = combinedText.match(new RegExp(pattern))
       if (!matches) {
         return { is_followup: false, follow_up_to_session_id: null, context: null }
@@ -309,7 +377,7 @@ export default defineTools([
       const basePattern = currentSessionId.replace(/-\d+$/, '')
       const versionMatch = currentSessionId.match(/-(\d+)$/)
       if (versionMatch) {
-        const prevNum = parseInt(versionMatch[1]) - 1
+        const prevNum = parseInt(versionMatch[1]!, 10) - 1
         if (prevNum > 0) {
           const priorSessionId = `${basePattern}-${prevNum}`
           const db = getDbClient()
@@ -318,7 +386,7 @@ export default defineTools([
             args: [priorSessionId],
           })
           if (existing.rows && existing.rows.length > 0) {
-            const row = existing.rows[0] as any
+            const row = existing.rows[0] as Record<string, unknown>
             return {
               is_followup: true,
               follow_up_to_session_id: priorSessionId,
@@ -326,7 +394,7 @@ export default defineTools([
                 prior_session_id: row.session_id,
                 prior_meeting_date: row.meeting_date,
                 prior_title: row.title,
-                prior_summary_snippet: row.whatsapp_summary ? row.whatsapp_summary.substring(0, 500) : null,
+                prior_summary_snippet: row.whatsapp_summary ? (row.whatsapp_summary as string).substring(0, 500) : null,
               },
             }
           }
