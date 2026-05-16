@@ -1,0 +1,46 @@
+suite: "Government Analyst Tests"
+slug: "government-analyst-tests"
+agent: "government-analyst"
+description: "Test government meeting transcription summarization with follow-up detection and Turso storage"
+tags: ["government", "summarization", "follow-up"]
+judgeModel: "openai/gpt-5-mini"
+judgePrompt: "Evaluate whether the agent correctly extracts session ID, detects follow-ups, generates proper WhatsApp-formatted summary, and returns only { id } JSON."
+
+cases:
+  - name: "Basic summarization"
+    description: "Agent should summarize a meeting transcript and return { id }"
+    turns:
+      - user: '{"videoTitle": "Sesión DOPM-01-2026 del 15 de marzo de 2026", "transcript": "Sesión ordinaria del Ayuntamiento. Participaron: el Alcalde Juan Pérez, la Síndico María López, y los regidores Carlos García y Ana Martínez. Se discutió el presupuesto municipal para 2026. Se aprobó por mayoría el incremento del 5% en el impuesto predial. Acciones pendientes: revisión de obras públicas para abril. Votación: 8 a favor, 2 en contra."}'
+        assertions:
+          - type: tool_called
+            value: "meetings_check_followup"
+          - type: tool_called
+            value: "meetings_save_summary"
+          - type: contains
+            value: "{"
+          - type: regex
+            value: '"id":\\s*\\d+'
+
+  - name: "Follow-up detection"
+    description: "Agent should detect follow-up and retrieve prior session context"
+    turns:
+      - user: '{"videoTitle": "Sesión DOPM-02-2026 - Continuación del 22 de marzo de 2026", "transcript": "Continuación de la sesión DOPM-01-2026 del día 15 de marzo. El alcalde Juan Pérez retoma la discusión del presupuesto. Se presentan las observaciones de la auditoría interna. Votación final del presupuesto: aprobado por UNANIMIDAD."}'
+        assertions:
+          - type: tool_called
+            value: "meetings_check_followup"
+          - type: tool_called
+            value: "meetings_get_summary"
+          - type: tool_called
+            value: "meetings_save_summary"
+          - type: regex
+            value: '"id":\\s*\\d+'
+
+  - name: "Output format validation"
+    description: "Agent must return ONLY JSON with id, no text"
+    turns:
+      - user: '{"videoTitle": "Sesión OPC-03-2026 del 10 de abril de 2026", "transcript": "Sesión extraordinaria. Tema único: aprobación del plan de obras públicas. Se vote la contratación de la empresa constructora por 5 millones de pesos. Resultado: 12 votos a favor, 0 en contra."}'
+        assertions:
+          - type: llm_judge
+            criteria: "Response is valid JSON with id field only, no surrounding text or explanation"
+          - type: regex
+            value: '^\\s*\\{[^}]*"id":\\s*\\d+[^}]*\\}\\s*$'

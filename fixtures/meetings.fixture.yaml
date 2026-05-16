@@ -1,0 +1,80 @@
+# Test fixtures for government analyst agent evaluation
+# These fixtures preload test meeting data into the eval environment
+
+meetings:
+  - id: 1
+    session_id: "DOPM-01-2026"
+    meeting_date: "2026-03-15"
+    title: "Sesión ordinaria del Ayuntamiento de Nonoslahacen"
+    video_title: "Sesión DOPM-01-2026 del 15 de marzo de 2026"
+    participants: '["Alcalde Juan Pérez", "Síndico María López", "Regidor Carlos García", "Regidora Ana Martínez"]'
+    topics: '["Presupuesto municipal 2026", "Incremento impuesto predial", "Obras públicas"]'
+    decisions: '["Aprobación del incremento del 5% en impuesto predial"]'
+    pending_actions: '["Revisión de obras públicas para abril"]'
+    important_points: '["Mayoría calificada para aprobación presupuestal", "Sesión extraordinaria pendiente para marzo 22"]'
+    voting_records: '["8 a favor, 2 en contra"]'
+    follow_up_to: null
+    whatsapp_summary: |
+      📋 *SESIÓN DOPM-01-2026*
+      📅 15 de marzo de 2026
+
+      👥 *Participantes:*
+      • Alcalde Juan Pérez
+      • Síndico María López
+      • Regidor Carlos García
+      • Regidora Ana Martínez
+
+      📌 *Temas:*
+      • Presupuesto municipal 2026
+      • Incremento impuesto predial (5%)
+      • Revisión obras públicas
+
+      ✅ *Decisiones:*
+      • Aprobado incremento 5% impuesto predial
+
+      ⏳ *Acciones pendientes:*
+      • Revisión de obras públicas para abril
+
+      ⚠️ *Puntos importantes:*
+      • Se requiere mayoría calificada para aprobación presupuestal
+      • Sesión extraordinaria pendiente para marzo 22
+    created_at: "2026-03-15T10:00:00"
+    updated_at: "2026-03-15T10:00:00"
+    archived_at: null
+
+  - id: 2
+    session_id: "OPC-01-2026"
+    meeting_date: "2026-02-10"
+    title: "Sesión extraordinaria - Comité de obras públicas"
+    video_title: "Sesión OPC-01-2026 del 10 de febrero de 2026"
+    participants: '["Director de obras públicas", "Ingeniero municipal", "3 contratistas"]'
+    topics: '["Licitación de obras", "Plan de infraestructura"]'
+    decisions: '["Aprobación del plan de infraestructura"]'
+    pending_actions: '["Publicación de licitaciones"]'
+    important_points: '["Presupuesto de 5 millones para obras"]'
+    voting_records: '["12 votos a favor, 0 en contra"]'
+    follow_up_to: null
+    whatsapp_summary: |
+      📋 *SESIÓN OPC-01-2026*
+      📅 10 de febrero de 2026
+
+      👥 *Participantes:*
+      • Director de obras públicas
+      • Ingeniero municipal
+      • 3 contratistas
+
+      📌 *Temas:*
+      • Licitación de obras
+      • Plan de infraestructura
+
+      ✅ *Decisiones:*
+      • Aprobado plan de infraestructura
+
+      ⏳ *Acciones pendientes:*
+      • Publicación de licitaciones
+
+      ⚠️ *Puntos importantes:*
+      • Presupuesto de 5 millones para obras
+    created_at: "2026-02-10T14:00:00"
+    updated_at: "2026-02-10T14:00:00"
+    archived_at: null
