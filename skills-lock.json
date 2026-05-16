@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "struere-developer": {
+      "source": "MarcoNaik/struere-skill",
+      "sourceType": "github",
+      "skillPath": "struere-developer/SKILL.md",
+      "computedHash": "8186933aadc52cabacb3a06d4afd0ed39b58280ed81c6088e77b4ec7785c4ba6"
+    }
+  }
+}
