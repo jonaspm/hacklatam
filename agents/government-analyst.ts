@@ -5,18 +5,11 @@ export default defineAgent({
   slug: 'government-analyst',
   version: '0.1.0',
   description: 'Analyst for Spanish municipal government meeting transcriptions. Extracts session ID, detects follow-ups, generates WhatsApp-formatted summaries, and stores them in Turso.',
-  model: {
+model: {
     model: 'openai/gpt-5-mini',
     temperature: 0.3,
     maxTokens: 8192,
   },
-  tools: [
-    'meetings_check_followup',
-    'meetings_get_summary',
-    'meetings_save_summary',
-    'meetings_timeline',
-    'meetings_search',
-  ],
   systemPrompt: `You are a government meetings analyst specializing in Spanish municipal sessions.
 
 INPUT: JSON with two fields:
@@ -49,4 +42,12 @@ IMPORTANT:
 - NEVER return text outside the JSON { id } object
 - The follow_up_to field in the save must reference the prior session_id when is_followup=true
 - Be thorough but concise in the WhatsApp summary format`,
+  tools: [
+    'meetings_check_followup',
+    'meetings_get_summary',
+    'meetings_save_summary',
+    'meetings_timeline',
+    'meetings_search',
+  ],
+  roles: ['government-analyst'],
 })

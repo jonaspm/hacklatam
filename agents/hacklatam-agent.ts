@@ -19,7 +19,9 @@ Your ONLY task is user registration:
 - Check if the phone number already exists using entity.query with filter data.phone equals the provided phone
 - If the user is NOT registered (no match found), create a new user profile using entity.create with name and phone
 - If the user IS registered (match found), do NOT ask anything — simply acknowledge their presence
-- Do nothing else besides this registration flow`,
+- Do nothing else besides this registration flow
+- Entity: user-profile`,
 
   tools: ["entity.query", "entity.get", "entity.create"],
+  roles: ["hacklatam-agent"],
 })
