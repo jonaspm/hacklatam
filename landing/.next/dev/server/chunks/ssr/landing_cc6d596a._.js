@@ -89,42 +89,28 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$l
 ;
 ;
 ;
-const words = [
-    "Contexto",
-    "Evidencia",
-    "Acceso",
-    "Visibilidad",
-    "Transparencia"
-];
 function HeroSection() {
     const [isVisible, setIsVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [wordIndex, setWordIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         setIsVisible(true);
-    }, []);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const interval = setInterval(()=>{
-            setWordIndex((prev)=>(prev + 1) % words.length);
-        }, 2500);
-        return ()=>clearInterval(interval);
     }, []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: "relative min-h-screen flex flex-col justify-center overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute right-0 top-[80%] -translate-y-1/2 w-[650px] h-[520px] lg:w-[975px] lg:h-[715px] opacity-50 pointer-events-none animate-float",
+                className: "absolute right-0 top-1/2 -translate-y-1/2 w-[650px] h-[520px] lg:w-[975px] lg:h-[715px] opacity-50 pointer-events-none animate-float",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                     src: "/images/mexico-map.png",
                     alt: "",
                     className: "w-full h-full object-contain"
                 }, void 0, false, {
                     fileName: "[project]/landing/components/landing/hero-section.tsx",
-                    lineNumber: 29,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/landing/components/landing/hero-section.tsx",
-                lineNumber: 28,
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -141,7 +127,7 @@ function HeroSection() {
                             }
                         }, `h-${i}`, false, {
                             fileName: "[project]/landing/components/landing/hero-section.tsx",
-                            lineNumber: 39,
+                            lineNumber: 28,
                             columnNumber: 11
                         }, this)),
                     [
@@ -155,13 +141,13 @@ function HeroSection() {
                             }
                         }, `v-${i}`, false, {
                             fileName: "[project]/landing/components/landing/hero-section.tsx",
-                            lineNumber: 50,
+                            lineNumber: 39,
                             columnNumber: 11
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "[project]/landing/components/landing/hero-section.tsx",
-                lineNumber: 37,
+                lineNumber: 26,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -179,14 +165,29 @@ function HeroSection() {
                                     className: "w-8 h-px bg-foreground/30"
                                 }, void 0, false, {
                                     fileName: "[project]/landing/components/landing/hero-section.tsx",
-                                    lineNumber: 69,
+                                    lineNumber: 58,
                                     columnNumber: 13
                                 }, this),
                                 "No Nos La Hacen"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/landing/components/landing/hero-section.tsx",
-                            lineNumber: 68,
+                            lineNumber: 57,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/landing/components/landing/hero-section.tsx",
+                        lineNumber: 53,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mb-12",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                            className: `max-w-5xl text-[clamp(1.75rem,4.5vw,3.25rem)] font-display leading-[1.15] tracking-tight transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`,
+                            children: "Monitoreo de canales oficiales del gobierno y noticias relacionadas con corrupción en México, recibe resúmenes directamente a tu WhatsApp."
+                        }, void 0, false, {
+                            fileName: "[project]/landing/components/landing/hero-section.tsx",
+                            lineNumber: 65,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
@@ -195,141 +196,40 @@ function HeroSection() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mb-12",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: `text-[clamp(2.4rem,9.6vw,8rem)] font-display leading-[0.9] tracking-tight transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`,
+                        className: `flex items-start transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`,
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                            size: "lg",
+                            className: "bg-foreground hover:bg-foreground/90 text-background px-10 h-16 text-base rounded-full group",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "block",
-                                    style: {
-                                        fontSize: "88.544px"
-                                    },
-                                    children: "El gobierno publica información."
+                                "Recibir resúmenes",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
+                                    className: "w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
                                 }, void 0, false, {
                                     fileName: "[project]/landing/components/landing/hero-section.tsx",
-                                    lineNumber: 80,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "block",
-                                    children: [
-                                        "Nosotros la convertimos en",
-                                        " ",
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "relative inline-block",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "inline-flex",
-                                                    children: words[wordIndex].split("").map((char, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: "inline-block animate-char-in",
-                                                            style: {
-                                                                animationDelay: `${i * 50}ms`
-                                                            },
-                                                            children: char
-                                                        }, `${wordIndex}-${i}`, false, {
-                                                            fileName: "[project]/landing/components/landing/hero-section.tsx",
-                                                            lineNumber: 89,
-                                                            columnNumber: 21
-                                                        }, this))
-                                                }, wordIndex, false, {
-                                                    fileName: "[project]/landing/components/landing/hero-section.tsx",
-                                                    lineNumber: 84,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "absolute -bottom-2 left-0 right-0 h-3 bg-foreground/10"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/landing/components/landing/hero-section.tsx",
-                                                    lineNumber: 100,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/landing/components/landing/hero-section.tsx",
-                                            lineNumber: 83,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/landing/components/landing/hero-section.tsx",
-                                    lineNumber: 81,
+                                    lineNumber: 84,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/landing/components/landing/hero-section.tsx",
-                            lineNumber: 76,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/landing/components/landing/hero-section.tsx",
                         lineNumber: 75,
                         columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid lg:grid-cols-2 gap-12 lg:gap-24 items-end",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: `text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-xl transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`,
-                                children: "Monitoreamos canales oficiales en YouTube y noticias de interés público. Resúmenes claros, enlace a la fuente y alertas directo a tu WhatsApp."
-                            }, void 0, false, {
-                                fileName: "[project]/landing/components/landing/hero-section.tsx",
-                                lineNumber: 108,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: `flex flex-col sm:flex-row items-start gap-4 transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`,
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                        size: "lg",
-                                        className: "bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group",
-                                        children: [
-                                            "Recibir resúmenes",
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
-                                                className: "w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
-                                            }, void 0, false, {
-                                                fileName: "[project]/landing/components/landing/hero-section.tsx",
-                                                lineNumber: 126,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/landing/components/landing/hero-section.tsx",
-                                        lineNumber: 121,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                        size: "lg",
-                                        variant: "outline",
-                                        className: "h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5",
-                                        children: "Ver cómo funciona"
-                                    }, void 0, false, {
-                                        fileName: "[project]/landing/components/landing/hero-section.tsx",
-                                        lineNumber: 128,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/landing/components/landing/hero-section.tsx",
-                                lineNumber: 117,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/landing/components/landing/hero-section.tsx",
-                        lineNumber: 107,
-                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/landing/components/landing/hero-section.tsx",
-                lineNumber: 62,
+                lineNumber: 51,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/landing/components/landing/hero-section.tsx",
-        lineNumber: 26,
+        lineNumber: 15,
         columnNumber: 5
     }, this);
 }
@@ -2180,31 +2080,31 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$l
 const securityFeatures = [
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Shield$3e$__["Shield"],
-        title: "SOC 2 Type II",
-        description: "Independently audited security controls with continuous monitoring."
+        title: "Fuentes verificables",
+        description: "Cada resumen incluye enlace directo al video o artículo original. Sin interpretaciones opacas."
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$lock$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Lock$3e$__["Lock"],
-        title: "End-to-end encryption",
-        description: "AES-256 encryption for data at rest and TLS 1.3 in transit."
+        title: "Solo datos públicos",
+        description: "Trabajamos exclusivamente con información de acceso abierto: transmisiones oficiales y medios públicos."
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__["Eye"],
-        title: "Zero-trust architecture",
-        description: "Every request is authenticated and authorized. No exceptions."
+        title: "Trazabilidad completa",
+        description: "Del canal de origen al resumen en tu WhatsApp. Evidencia conectada en cada paso."
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileCheck$3e$__["FileCheck"],
-        title: "GDPR & HIPAA",
-        description: "Full compliance with data protection and healthcare regulations."
+        title: "Sin sesgo partidista",
+        description: "Monitoreo técnico e imparcial. Presentamos hechos y contexto, no narrativas políticas."
     }
 ];
 const certifications = [
-    "SOC 2",
-    "ISO 27001",
-    "HIPAA",
-    "GDPR",
-    "CCPA"
+    "Fuente original",
+    "Datos abiertos",
+    "Trazable",
+    "Imparcial",
+    "Verificable"
 ];
 function SecuritySection() {
     const [isVisible, setIsVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -2240,7 +2140,7 @@ function SecuritySection() {
                                         lineNumber: 58,
                                         columnNumber: 15
                                     }, this),
-                                    "Security"
+                                    "Confianza"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/landing/components/landing/security-section.tsx",
@@ -2250,13 +2150,13 @@ function SecuritySection() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                 className: "text-4xl lg:text-6xl font-display tracking-tight mb-8",
                                 children: [
-                                    "Trust is",
+                                    "La evidencia",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/landing/components/landing/security-section.tsx",
                                         lineNumber: 63,
                                         columnNumber: 15
                                     }, this),
-                                    "non-negotiable."
+                                    "es verificable."
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/landing/components/landing/security-section.tsx",
@@ -2265,7 +2165,7 @@ function SecuritySection() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-xl text-muted-foreground leading-relaxed mb-12",
-                                children: "Enterprise-grade security isn't optional. It's built into every layer of our platform, from infrastructure to application."
+                                children: "Transparencia digital construida sobre fuentes públicas. Cada dato que compartimos puede rastrearse hasta su origen."
                             }, void 0, false, {
                                 fileName: "[project]/landing/components/landing/security-section.tsx",
                                 lineNumber: 66,
@@ -2394,51 +2294,48 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$l
 ;
 const codeExamples = [
     {
-        label: "Install",
-        code: `npm install @optimus/sdk
-
-# or
-yarn add @optimus/sdk
-pnpm add @optimus/sdk`
-    },
-    {
-        label: "Initialize",
-        code: `import { Optimus } from '@optimus/sdk'
-
-const optimus = new Optimus({
-  apiKey: process.env.OPTIMUS_KEY
+        label: "Monitoreo",
+        code: `pipeline.watch({
+  sources: ['youtube_oficial'],
+  region: 'mexico',
+  topics: ['gobierno', 'asambleas']
 })`
     },
     {
-        label: "Deploy",
-        code: `const app = await optimus.deploy({
-  name: 'my-app',
-  region: 'auto',
-  scaling: {
-    min: 1,
-    max: 100
-  }
+        label: "Análisis",
+        code: `const resumen = await pipeline.analyze({
+  video: transmision_oficial,
+  format: 'resumen_estructurado',
+  include_source: true
+})`
+    },
+    {
+        label: "Entrega",
+        code: `await delivery.whatsapp({
+  to: suscriptor,
+  summary: resumen,
+  source_url: video.original
 })
 
-console.log('Live at:', app.url)`
+// Resumen entregado`
     }
 ];
 const features = [
     {
-        title: "TypeScript native",
-        description: "Full type safety with auto-generated types."
+        title: "Procesamiento automático",
+        description: "Videos de horas convertidos en síntesis en minutos."
     },
     {
-        title: "Zero config",
-        description: "Sensible defaults that just work."
+        title: "Fuentes rastreables",
+        description: "Cada resumen enlaza al material original publicado."
     },
     {
-        title: "Edge-ready",
-        description: "Runs anywhere: Node, Deno, Bun, browsers."
+        title: "Alertas en tiempo real",
+        description: "Nuevas transmisiones y noticias, directo a WhatsApp."
     },
     {
-        title: "12KB gzipped",
-        description: "Lightweight with zero dependencies."
+        title: "Cobertura nacional",
+        description: "Federal, estatal y legislativo en un solo sistema."
     }
 ];
 const codeAnimationStyles = `
@@ -2498,7 +2395,7 @@ function DevelopersSection() {
                 }
             }, void 0, false, {
                 fileName: "[project]/landing/components/landing/developers-section.tsx",
-                lineNumber: 111,
+                lineNumber: 108,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2516,45 +2413,45 @@ function DevelopersSection() {
                                             className: "w-8 h-px bg-foreground/30"
                                         }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                            lineNumber: 121,
+                                            lineNumber: 118,
                                             columnNumber: 15
                                         }, this),
-                                        "For developers"
+                                        "Tecnología"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                    lineNumber: 120,
+                                    lineNumber: 117,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                     className: "text-4xl lg:text-6xl font-display tracking-tight mb-8",
                                     children: [
-                                        "Built by devs.",
+                                        "Civic tech",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                             fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                            lineNumber: 126,
+                                            lineNumber: 123,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "text-muted-foreground",
-                                            children: "For devs."
+                                            children: "para México."
                                         }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                            lineNumber: 127,
+                                            lineNumber: 124,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 121,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-xl text-muted-foreground mb-12 leading-relaxed",
-                                    children: "A thoughtfully designed SDK that gets out of your way. Ship faster with intuitive APIs and exceptional documentation."
+                                    children: "Infraestructura de monitoreo e inteligencia pública. Automatizamos el acceso a información que ya es tuya por derecho."
                                 }, void 0, false, {
                                     fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                    lineNumber: 129,
+                                    lineNumber: 126,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2570,7 +2467,7 @@ function DevelopersSection() {
                                                     children: feature.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                                    lineNumber: 144,
+                                                    lineNumber: 141,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2578,24 +2475,24 @@ function DevelopersSection() {
                                                     children: feature.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                                    lineNumber: 145,
+                                                    lineNumber: 142,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, feature.title, true, {
                                             fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                            lineNumber: 137,
+                                            lineNumber: 134,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                    lineNumber: 135,
+                                    lineNumber: 132,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/landing/components/landing/developers-section.tsx",
-                            lineNumber: 115,
+                            lineNumber: 112,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2617,20 +2514,20 @@ function DevelopersSection() {
                                                                 className: "absolute bottom-0 left-0 right-0 h-px bg-foreground"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                                                lineNumber: 173,
+                                                                lineNumber: 170,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, example.label, true, {
                                                         fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                                        lineNumber: 161,
+                                                        lineNumber: 158,
                                                         columnNumber: 19
                                                     }, this)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "flex-1"
                                                 }, void 0, false, {
                                                     fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                                    lineNumber: 177,
+                                                    lineNumber: 174,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2642,24 +2539,24 @@ function DevelopersSection() {
                                                         className: "w-4 h-4 text-green-600"
                                                     }, void 0, false, {
                                                         fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                                        lineNumber: 185,
+                                                        lineNumber: 182,
                                                         columnNumber: 21
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$copy$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Copy$3e$__["Copy"], {
                                                         className: "w-4 h-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                                        lineNumber: 187,
+                                                        lineNumber: 184,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                                    lineNumber: 178,
+                                                    lineNumber: 175,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                            lineNumber: 159,
+                                            lineNumber: 156,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2681,33 +2578,33 @@ function DevelopersSection() {
                                                                     children: char === ' ' ? '\u00A0' : char
                                                                 }, `${activeTab}-${lineIndex}-${charIndex}`, false, {
                                                                     fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                                                    lineNumber: 203,
+                                                                    lineNumber: 200,
                                                                     columnNumber: 27
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                                            lineNumber: 201,
+                                                            lineNumber: 198,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, `${activeTab}-${lineIndex}`, false, {
                                                         fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                                        lineNumber: 196,
+                                                        lineNumber: 193,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                                lineNumber: 194,
+                                                lineNumber: 191,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                            lineNumber: 193,
+                                            lineNumber: 190,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                    lineNumber: 157,
+                                    lineNumber: 154,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2716,10 +2613,10 @@ function DevelopersSection() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                             href: "#",
                                             className: "text-foreground hover:underline underline-offset-4",
-                                            children: "Read the docs"
+                                            children: "Conocer la plataforma"
                                         }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                            lineNumber: 222,
+                                            lineNumber: 219,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2727,45 +2624,45 @@ function DevelopersSection() {
                                             children: "|"
                                         }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                            lineNumber: 225,
+                                            lineNumber: 222,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                             href: "#",
                                             className: "text-muted-foreground hover:text-foreground",
-                                            children: "View on GitHub"
+                                            children: "Metodología"
                                         }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                            lineNumber: 226,
+                                            lineNumber: 223,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/landing/components/landing/developers-section.tsx",
-                                    lineNumber: 221,
+                                    lineNumber: 218,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/landing/components/landing/developers-section.tsx",
-                            lineNumber: 152,
+                            lineNumber: 149,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/landing/components/landing/developers-section.tsx",
-                    lineNumber: 113,
+                    lineNumber: 110,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/landing/components/landing/developers-section.tsx",
-                lineNumber: 112,
+                lineNumber: 109,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/landing/components/landing/developers-section.tsx",
-        lineNumber: 110,
+        lineNumber: 107,
         columnNumber: 5
     }, this);
 }
@@ -2784,32 +2681,32 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$n
 ;
 const testimonials = [
     {
-        quote: "Optimus transformed our deployment pipeline. What used to take hours now happens in seconds.",
-        author: "Sarah Chen",
-        role: "CTO",
-        company: "Meridian Labs",
-        metric: "10x faster deployments"
+        quote: "Por fin puedo seguir las sesiones del Senado sin ver tres horas de video. El resumen y el enlace me llegan directo.",
+        author: "Mariana Soto",
+        role: "Periodista",
+        company: "Medios independientes",
+        metric: "3h → 5 min de lectura"
     },
     {
-        quote: "The developer experience is unmatched. Our team's productivity has never been higher.",
-        author: "Marcus Webb",
-        role: "Engineering Lead",
-        company: "Flux Systems",
-        metric: "40% more features shipped"
+        quote: "Lo que más valoro es que siempre incluyen la fuente. Puedo verificar cualquier dato en el video original.",
+        author: "Carlos Mendoza",
+        role: "Investigador",
+        company: "Universidad Nacional",
+        metric: "100% con fuente original"
     },
     {
-        quote: "Finally, infrastructure that scales with our ambition. Zero downtime since we switched.",
-        author: "Elena Rodriguez",
-        role: "VP Engineering",
-        company: "Beacon AI",
-        metric: "99.99% uptime"
+        quote: "Monitoreamos gobiernos estatales que antes eran invisibles. La información pública ahora tiene visibilidad.",
+        author: "Ana Beltrán",
+        role: "Directora",
+        company: "Observatorio Cívico",
+        metric: "12 estados monitoreados"
     },
     {
-        quote: "The integrations are seamless. We connected our entire stack in a single afternoon.",
-        author: "James Liu",
-        role: "Founder",
-        company: "Prism Analytics",
-        metric: "50+ integrations used"
+        quote: "Recibo las alertas en WhatsApp y comparto con mi equipo. Acceso a información pública, simplificado.",
+        author: "Roberto Fuentes",
+        role: "Coordinador",
+        company: "Red de Transparencia",
+        metric: "Alertas en tiempo real"
     }
 ];
 function TestimonialsSection() {
@@ -2837,7 +2734,7 @@ function TestimonialsSection() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "font-mono text-xs tracking-widest text-muted-foreground uppercase",
-                                children: "What people say"
+                                children: "Voces de la comunidad"
                             }, void 0, false, {
                                 fileName: "[project]/landing/components/landing/testimonials-section.tsx",
                                 lineNumber: 58,
@@ -2959,7 +2856,7 @@ function TestimonialsSection() {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "font-mono text-xs tracking-widest text-muted-foreground uppercase block mb-4",
-                                                children: "Key Result"
+                                                children: "Resultado clave"
                                             }, void 0, false, {
                                                 fileName: "[project]/landing/components/landing/testimonials-section.tsx",
                                                 lineNumber: 107,
@@ -3016,7 +2913,7 @@ function TestimonialsSection() {
                         className: "mt-24 pt-12 border-t border-foreground/10",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "font-mono text-xs tracking-widest text-muted-foreground uppercase mb-8 text-center",
-                            children: "Trusted by forward-thinking teams"
+                            children: "Quienes confían en acceso a información pública"
                         }, void 0, false, {
                             fileName: "[project]/landing/components/landing/testimonials-section.tsx",
                             lineNumber: 140,
@@ -3042,14 +2939,14 @@ function TestimonialsSection() {
                     ].map((_, setIdx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex gap-16 items-center shrink-0",
                             children: [
-                                "Meridian Labs",
-                                "Flux Systems",
-                                "Beacon AI",
-                                "Prism Analytics",
-                                "Nova Tech",
-                                "Quantum Corp",
-                                "Atlas Digital",
-                                "Vertex Labs"
+                                "Observatorio Cívico",
+                                "Red de Transparencia",
+                                "Medios Independientes",
+                                "Universidad Nacional",
+                                "Datos Abiertos MX",
+                                "Civic Tech LATAM",
+                                "Periodismo de Datos",
+                                "Acceso a la Info"
                             ].map((company)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "font-display text-xl md:text-2xl text-foreground/30 whitespace-nowrap hover:text-foreground transition-colors duration-300",
                                     children: company
@@ -3098,59 +2995,59 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$l
 ;
 const plans = [
     {
-        name: "Starter",
-        description: "For individuals and small projects",
+        name: "Comunidad",
+        description: "Para ciudadanos que quieren estar informados",
         price: {
             monthly: 0,
             annual: 0
         },
         features: [
-            "Up to 3 projects",
-            "1GB storage",
-            "Community support",
-            "Basic analytics",
-            "SSL certificates"
+            "Resúmenes semanales",
+            "Alertas de canales federales",
+            "Enlaces a fuente original",
+            "Acceso por WhatsApp",
+            "Comunidad abierta"
         ],
-        cta: "Start free",
+        cta: "Unirme gratis",
         popular: false
     },
     {
-        name: "Pro",
-        description: "For growing teams and businesses",
+        name: "Ciudadanía",
+        description: "Para quienes necesitan estar al día",
         price: {
-            monthly: 29,
-            annual: 24
+            monthly: 99,
+            annual: 79
         },
         features: [
-            "Unlimited projects",
-            "100GB storage",
-            "Priority support",
-            "Advanced analytics",
-            "Custom domains",
-            "Team collaboration",
-            "API access"
+            "Alertas en tiempo real",
+            "Todos los canales oficiales",
+            "Resúmenes de noticias",
+            "Cobertura estatal",
+            "Prioridad en WhatsApp",
+            "Historial de resúmenes",
+            "Soporte directo"
         ],
-        cta: "Start trial",
+        cta: "Suscribirme",
         popular: true
     },
     {
-        name: "Enterprise",
-        description: "For large-scale operations",
+        name: "Institucional",
+        description: "Para medios, ONGs y organizaciones",
         price: {
             monthly: null,
             annual: null
         },
         features: [
-            "Everything in Pro",
-            "Unlimited storage",
-            "24/7 dedicated support",
-            "Custom integrations",
-            "SLA guarantee",
-            "On-premise option",
-            "Security audit",
-            "Custom contracts"
+            "Todo en Ciudadanía",
+            "Monitoreo personalizado",
+            "Canales a la medida",
+            "API de resúmenes",
+            "Reportes periódicos",
+            "Soporte dedicado",
+            "Capacitación incluida",
+            "Contrato flexible"
         ],
-        cta: "Contact sales",
+        cta: "Contactar",
         popular: false
     }
 ];
@@ -3167,7 +3064,7 @@ function PricingSection() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             className: "font-mono text-xs tracking-widest text-muted-foreground uppercase block mb-6",
-                            children: "Pricing"
+                            children: "Membresía"
                         }, void 0, false, {
                             fileName: "[project]/landing/components/landing/pricing-section.tsx",
                             lineNumber: 64,
@@ -3176,7 +3073,7 @@ function PricingSection() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                             className: "font-display text-5xl md:text-6xl lg:text-7xl tracking-tight text-foreground mb-6",
                             children: [
-                                "Simple, transparent",
+                                "Acceso claro,",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                     fileName: "[project]/landing/components/landing/pricing-section.tsx",
                                     lineNumber: 69,
@@ -3184,7 +3081,7 @@ function PricingSection() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "text-stroke",
-                                    children: "pricing"
+                                    children: "sin sorpresas"
                                 }, void 0, false, {
                                     fileName: "[project]/landing/components/landing/pricing-section.tsx",
                                     lineNumber: 70,
@@ -3198,7 +3095,7 @@ function PricingSection() {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-lg text-muted-foreground max-w-xl",
-                            children: "Start free and scale as you grow. No hidden fees, no surprises."
+                            children: "Únete gratis o suscríbete para alertas en tiempo real. La información pública no debería costar interpretarla."
                         }, void 0, false, {
                             fileName: "[project]/landing/components/landing/pricing-section.tsx",
                             lineNumber: 72,
@@ -3215,10 +3112,10 @@ function PricingSection() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             className: `text-sm transition-colors ${!isAnnual ? "text-foreground" : "text-muted-foreground"}`,
-                            children: "Monthly"
+                            children: "Mensual"
                         }, void 0, false, {
                             fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                            lineNumber: 79,
+                            lineNumber: 80,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3228,34 +3125,34 @@ function PricingSection() {
                                 className: `w-5 h-5 bg-foreground rounded-full transition-transform duration-300 ${isAnnual ? "translate-x-7" : "translate-x-0"}`
                             }, void 0, false, {
                                 fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                lineNumber: 90,
+                                lineNumber: 91,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                            lineNumber: 86,
+                            lineNumber: 87,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             className: `text-sm transition-colors ${isAnnual ? "text-foreground" : "text-muted-foreground"}`,
-                            children: "Annual"
+                            children: "Anual"
                         }, void 0, false, {
                             fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                            lineNumber: 96,
+                            lineNumber: 97,
                             columnNumber: 11
                         }, this),
                         isAnnual && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             className: "ml-2 px-2 py-1 bg-foreground text-primary-foreground text-xs font-mono",
-                            children: "Save 17%"
+                            children: "Ahorra 20%"
                         }, void 0, false, {
                             fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                            lineNumber: 104,
+                            lineNumber: 105,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                    lineNumber: 78,
+                    lineNumber: 79,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3265,10 +3162,10 @@ function PricingSection() {
                             children: [
                                 plan.popular && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "absolute -top-3 left-8 px-3 py-1 bg-foreground text-primary-foreground text-xs font-mono uppercase tracking-widest",
-                                    children: "Most Popular"
+                                    children: "Más popular"
                                 }, void 0, false, {
                                     fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                    lineNumber: 120,
+                                    lineNumber: 121,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3279,7 +3176,7 @@ function PricingSection() {
                                             children: String(idx + 1).padStart(2, "0")
                                         }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                            lineNumber: 127,
+                                            lineNumber: 128,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -3287,7 +3184,7 @@ function PricingSection() {
                                             children: plan.name
                                         }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                            lineNumber: 130,
+                                            lineNumber: 131,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3295,13 +3192,13 @@ function PricingSection() {
                                             children: plan.description
                                         }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                            lineNumber: 131,
+                                            lineNumber: 132,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 127,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3317,33 +3214,33 @@ function PricingSection() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                                lineNumber: 138,
+                                                lineNumber: 139,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "text-muted-foreground",
-                                                children: "/month"
+                                                children: "/mes"
                                             }, void 0, false, {
                                                 fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                                lineNumber: 141,
+                                                lineNumber: 142,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                        lineNumber: 137,
+                                        lineNumber: 138,
                                         columnNumber: 19
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "font-display text-4xl text-foreground",
-                                        children: "Custom"
+                                        children: "A medida"
                                     }, void 0, false, {
                                         fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                        lineNumber: 144,
+                                        lineNumber: 145,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                    lineNumber: 135,
+                                    lineNumber: 136,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -3355,7 +3252,7 @@ function PricingSection() {
                                                     className: "w-4 h-4 text-foreground mt-0.5 shrink-0"
                                                 }, void 0, false, {
                                                     fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                                    lineNumber: 152,
+                                                    lineNumber: 153,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3363,18 +3260,18 @@ function PricingSection() {
                                                     children: feature
                                                 }, void 0, false, {
                                                     fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                                    lineNumber: 153,
+                                                    lineNumber: 154,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, feature, true, {
                                             fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                            lineNumber: 151,
+                                            lineNumber: 152,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                    lineNumber: 149,
+                                    lineNumber: 150,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3385,44 +3282,44 @@ function PricingSection() {
                                             className: "w-4 h-4 transition-transform group-hover:translate-x-1"
                                         }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                            lineNumber: 167,
+                                            lineNumber: 168,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 160,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, plan.name, true, {
                             fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                            lineNumber: 113,
+                            lineNumber: 114,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                    lineNumber: 111,
+                    lineNumber: 112,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     className: "mt-12 text-center text-sm text-muted-foreground",
                     children: [
-                        "All plans include automatic updates, HTTPS, and DDoS protection.",
+                        "Todos los planes incluyen enlaces a fuente original y entrega por WhatsApp.",
                         " ",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             href: "#",
                             className: "underline underline-offset-4 hover:text-foreground transition-colors",
-                            children: "Compare all features"
+                            children: "Comparar planes"
                         }, void 0, false, {
                             fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                            lineNumber: 176,
+                            lineNumber: 177,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/landing/components/landing/pricing-section.tsx",
-                    lineNumber: 174,
+                    lineNumber: 175,
                     columnNumber: 9
                 }, this)
             ]
@@ -3720,13 +3617,13 @@ function CtaSection() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                             className: "text-4xl lg:text-7xl font-display tracking-tight mb-8 leading-[0.95]",
                                             children: [
-                                                "Ready to build",
+                                                "La información pública",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                     fileName: "[project]/landing/components/landing/cta-section.tsx",
                                                     lineNumber: 56,
                                                     columnNumber: 19
                                                 }, this),
-                                                "something great?"
+                                                "merece visibilidad."
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/landing/components/landing/cta-section.tsx",
@@ -3735,7 +3632,7 @@ function CtaSection() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl",
-                                            children: "Join thousands of teams shipping faster with Optimus. Start free, scale infinitely."
+                                            children: "Únete a la comunidad que recibe resúmenes claros, con evidencia y fuente original, directo en WhatsApp."
                                         }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/cta-section.tsx",
                                             lineNumber: 60,
@@ -3748,7 +3645,7 @@ function CtaSection() {
                                                     size: "lg",
                                                     className: "bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group",
                                                     children: [
-                                                        "Start building free",
+                                                        "Unirme por WhatsApp",
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
                                                             className: "w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
                                                         }, void 0, false, {
@@ -3766,7 +3663,7 @@ function CtaSection() {
                                                     size: "lg",
                                                     variant: "outline",
                                                     className: "h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5",
-                                                    children: "Talk to sales"
+                                                    children: "Recibir alertas"
                                                 }, void 0, false, {
                                                     fileName: "[project]/landing/components/landing/cta-section.tsx",
                                                     lineNumber: 73,
@@ -3780,7 +3677,7 @@ function CtaSection() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "text-sm text-muted-foreground mt-8 font-mono",
-                                            children: "No credit card required"
+                                            children: "Sin tarjeta de crédito"
                                         }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/cta-section.tsx",
                                             lineNumber: 82,
@@ -3939,45 +3836,45 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$components$2f$lan
 ;
 ;
 const footerLinks = {
-    Product: [
+    Plataforma: [
         {
-            name: "Features",
+            name: "Capacidades",
             href: "#features"
         },
         {
-            name: "How it works",
+            name: "Cómo funciona",
             href: "#how-it-works"
         },
         {
-            name: "Pricing",
+            name: "Membresía",
             href: "#pricing"
         },
         {
-            name: "Integrations",
+            name: "Fuentes",
             href: "#integrations"
         }
     ],
-    Developers: [
+    Recursos: [
         {
-            name: "Documentation",
+            name: "Metodología",
             href: "#developers"
         },
         {
-            name: "API Reference",
+            name: "Canales monitoreados",
             href: "#"
         },
         {
-            name: "SDK",
+            name: "Tecnología",
             href: "#developers"
         },
         {
-            name: "Status",
+            name: "Estado del sistema",
             href: "#"
         }
     ],
-    Company: [
+    Nosotros: [
         {
-            name: "About",
+            name: "Acerca de",
             href: "#"
         },
         {
@@ -3985,37 +3882,37 @@ const footerLinks = {
             href: "#"
         },
         {
-            name: "Careers",
+            name: "Comunidad",
             href: "#",
-            badge: "Hiring"
+            badge: "Abierta"
         },
         {
-            name: "Contact",
+            name: "Contacto",
             href: "#"
         }
     ],
     Legal: [
         {
-            name: "Privacy",
+            name: "Privacidad",
             href: "#"
         },
         {
-            name: "Terms",
+            name: "Términos",
             href: "#"
         },
         {
-            name: "Security",
+            name: "Confianza",
             href: "#security"
         }
     ]
 };
 const socialLinks = [
     {
-        name: "Twitter",
+        name: "X",
         href: "#"
     },
     {
-        name: "GitHub",
+        name: "WhatsApp",
         href: "#"
     },
     {
@@ -4053,35 +3950,25 @@ function FooterSection() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                             href: "#",
                                             className: "inline-flex items-center gap-2 mb-6",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "text-2xl font-display",
-                                                    children: "Optimus"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/landing/components/landing/footer-section.tsx",
-                                                    lineNumber: 53,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "text-xs text-muted-foreground font-mono",
-                                                    children: "TM"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/landing/components/landing/footer-section.tsx",
-                                                    lineNumber: 54,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-2xl font-display",
+                                                children: "No Nos La Hacen"
+                                            }, void 0, false, {
+                                                fileName: "[project]/landing/components/landing/footer-section.tsx",
+                                                lineNumber: 53,
+                                                columnNumber: 17
+                                            }, this)
+                                        }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/footer-section.tsx",
                                             lineNumber: 52,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "text-muted-foreground leading-relaxed mb-8 max-w-xs",
-                                            children: "The platform for teams who ship. Build, deploy, and scale with unprecedented velocity."
+                                            children: "Infraestructura de transparencia digital para México. Monitoreo, contexto y acceso a información pública."
                                         }, void 0, false, {
                                             fileName: "[project]/landing/components/landing/footer-section.tsx",
-                                            lineNumber: 57,
+                                            lineNumber: 56,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4179,7 +4066,7 @@ function FooterSection() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-sm text-muted-foreground",
-                                children: "2025 Optimus. All rights reserved."
+                                children: "2025 No Nos La Hacen. Todos los derechos reservados."
                             }, void 0, false, {
                                 fileName: "[project]/landing/components/landing/footer-section.tsx",
                                 lineNumber: 104,
@@ -4197,7 +4084,7 @@ function FooterSection() {
                                             lineNumber: 110,
                                             columnNumber: 15
                                         }, this),
-                                        "All systems operational"
+                                        "Sistema operativo"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/landing/components/landing/footer-section.tsx",
