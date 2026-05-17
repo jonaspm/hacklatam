@@ -1047,10 +1047,6 @@
     display: none;
   }
 
-  .inline-block {
-    display: inline-block;
-  }
-
   .inline-flex {
     display: inline-flex;
   }
@@ -2697,16 +2693,6 @@
     color: var(--background);
   }
 
-  .text-background\/20 {
-    color: var(--background);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .text-background\/20 {
-      color: color-mix(in oklab, var(--background) 20%, transparent);
-    }
-  }
-
   .text-background\/30 {
     color: var(--background);
   }
@@ -2747,13 +2733,13 @@
     }
   }
 
-  .text-background\/70 {
+  .text-background\/85 {
     color: var(--background);
   }
 
   @supports (color: color-mix(in lab, red, red)) {
-    .text-background\/70 {
-      color: color-mix(in oklab, var(--background) 70%, transparent);
+    .text-background\/85 {
+      color: color-mix(in oklab, var(--background) 85%, transparent);
     }
   }
 
@@ -5412,6 +5398,12 @@
     .lg\:border-b-0 {
       border-bottom-style: var(--tw-border-style);
       border-bottom-width: 0;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:p-10 {
+      padding: calc(var(--spacing) * 10);
     }
   }
 

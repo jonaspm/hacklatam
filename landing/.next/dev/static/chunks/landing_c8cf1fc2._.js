@@ -577,34 +577,17 @@ const steps = [
     {
         number: "I",
         title: "Monitoreamos fuentes públicas",
-        description: "Rastreamos canales oficiales en YouTube y medios de interés público. Solo datos abiertos y verificables.",
-        code: `monitor.sources({
-  youtube: ['gobmx', 'senado', 'asambleas'],
-  news: 'interes_publico',
-  region: 'mexico'
-})`
+        description: "Rastreamos canales oficiales en YouTube y medios de interés público. Solo datos abiertos y verificables."
     },
     {
         number: "II",
         title: "Generamos contexto",
-        description: "Procesamos videos y noticias para extraer lo relevante. Cada resumen enlaza a su fuente original.",
-        code: `pipeline.analyze({
-  input: 'video_transmision',
-  output: 'resumen_estructurado',
-  include: ['enlace_fuente', 'timestamp']
-})`
+        description: "Procesamos videos y noticias para extraer lo relevante. Cada resumen enlaza a su fuente original."
     },
     {
         number: "III",
         title: "Te llega a WhatsApp",
-        description: "Resumen, contexto y enlace al material original. Directo a tu teléfono, sin intermediarios.",
-        code: `delivery.send({
-  channel: 'whatsapp',
-  content: resumen,
-  source: enlace_original
-})
-
-// Entregado en segundos`
+        description: "Resumen, contexto y enlace al material original. Directo a tu teléfono, sin intermediarios."
     }
 ];
 function HowItWorksSection() {
@@ -644,10 +627,10 @@ function HowItWorksSection() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "how-it-works",
         ref: sectionRef,
-        className: "jsx-d0fb98a0b853be6f" + " " + "relative py-24 lg:py-32 bg-foreground text-background overflow-hidden",
+        className: "jsx-e6d5695f83c7df5a" + " " + "relative py-24 lg:py-32 bg-foreground text-background overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-d0fb98a0b853be6f" + " " + "absolute inset-0 opacity-[0.03] pointer-events-none",
+                className: "jsx-e6d5695f83c7df5a" + " " + "absolute inset-0 opacity-[0.03] pointer-events-none",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     style: {
                         backgroundImage: `repeating-linear-gradient(
@@ -658,63 +641,285 @@ function HowItWorksSection() {
             currentColor 41px
           )`
                     },
-                    className: "jsx-d0fb98a0b853be6f" + " " + "absolute inset-0"
+                    className: "jsx-e6d5695f83c7df5a" + " " + "absolute inset-0"
                 }, void 0, false, {
                     fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                    lineNumber: 72,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                lineNumber: 71,
+                lineNumber: 54,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-d0fb98a0b853be6f" + " " + "relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12",
+                className: "jsx-e6d5695f83c7df5a" + " " + "relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "jsx-d0fb98a0b853be6f" + " " + "mb-16 lg:mb-24",
+                        className: "jsx-e6d5695f83c7df5a" + " " + "mb-16 lg:mb-24",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "jsx-d0fb98a0b853be6f" + " " + "inline-flex items-center gap-3 text-sm font-mono text-background/50 mb-6",
+                                className: "jsx-e6d5695f83c7df5a" + " " + "inline-flex items-center gap-3 text-sm font-mono text-background/50 mb-6",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "jsx-d0fb98a0b853be6f" + " " + "w-8 h-px bg-background/30"
+                                        className: "jsx-e6d5695f83c7df5a" + " " + "w-8 h-px bg-background/30"
                                     }, void 0, false, {
                                         fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                        lineNumber: 87,
+                                        lineNumber: 70,
                                         columnNumber: 13
                                     }, this),
                                     "Proceso"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                lineNumber: 86,
+                                lineNumber: 69,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "jsx-d0fb98a0b853be6f" + " " + `text-4xl lg:text-6xl font-display tracking-tight transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`,
+                                className: "jsx-e6d5695f83c7df5a" + " " + `text-4xl lg:text-6xl font-display tracking-tight transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`,
                                 children: [
                                     "Tres pasos.",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {
-                                        className: "jsx-d0fb98a0b853be6f"
+                                        className: "jsx-e6d5695f83c7df5a"
                                     }, void 0, false, {
                                         fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                        lineNumber: 96,
+                                        lineNumber: 79,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "jsx-d0fb98a0b853be6f" + " " + "text-background/50",
+                                        className: "jsx-e6d5695f83c7df5a" + " " + "text-background/50",
                                         children: "Información conectada."
                                     }, void 0, false, {
                                         fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                        lineNumber: 97,
+                                        lineNumber: 80,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                lineNumber: 90,
+                                lineNumber: 73,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                        lineNumber: 68,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "jsx-e6d5695f83c7df5a" + " " + "grid lg:grid-cols-2 gap-16 lg:gap-24",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "jsx-e6d5695f83c7df5a" + " " + "space-y-0",
+                                children: steps.map((step, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        type: "button",
+                                        onClick: ()=>setActiveStep(index),
+                                        className: "jsx-e6d5695f83c7df5a" + " " + `w-full text-left py-8 border-b border-background/10 transition-all duration-500 group ${activeStep === index ? "opacity-100" : "opacity-40 hover:opacity-70"}`,
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "jsx-e6d5695f83c7df5a" + " " + "flex items-start gap-6",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "jsx-e6d5695f83c7df5a" + " " + "font-display text-3xl text-background/30",
+                                                    children: step.number
+                                                }, void 0, false, {
+                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                    lineNumber: 98,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "jsx-e6d5695f83c7df5a" + " " + "flex-1",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                            className: "jsx-e6d5695f83c7df5a" + " " + "text-2xl lg:text-3xl font-display mb-3 group-hover:translate-x-2 transition-transform duration-300",
+                                                            children: step.title
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                            lineNumber: 100,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                            className: "jsx-e6d5695f83c7df5a" + " " + "text-background/60 leading-relaxed",
+                                                            children: step.description
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                            lineNumber: 103,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        activeStep === index && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "jsx-e6d5695f83c7df5a" + " " + "mt-4 h-px bg-background/20 overflow-hidden",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                style: {
+                                                                    animation: 'progress 5s linear forwards'
+                                                                },
+                                                                className: "jsx-e6d5695f83c7df5a" + " " + "h-full bg-background w-0"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                                lineNumber: 110,
+                                                                columnNumber: 25
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                            lineNumber: 109,
+                                                            columnNumber: 23
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                    lineNumber: 99,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                            lineNumber: 97,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, step.number, false, {
+                                        fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                        lineNumber: 89,
+                                        columnNumber: 15
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                lineNumber: 87,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "jsx-e6d5695f83c7df5a" + " " + "lg:sticky lg:top-32 self-start",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "jsx-e6d5695f83c7df5a" + " " + "border border-background/10 overflow-hidden",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "jsx-e6d5695f83c7df5a" + " " + "px-6 py-4 border-b border-background/10 flex items-center justify-between",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "jsx-e6d5695f83c7df5a" + " " + "flex gap-2",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "jsx-e6d5695f83c7df5a" + " " + "w-3 h-3 rounded-full bg-background/20"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                            lineNumber: 130,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "jsx-e6d5695f83c7df5a" + " " + "w-3 h-3 rounded-full bg-background/20"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                            lineNumber: 131,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "jsx-e6d5695f83c7df5a" + " " + "w-3 h-3 rounded-full bg-background/20"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                            lineNumber: 132,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                    lineNumber: 129,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "jsx-e6d5695f83c7df5a" + " " + "text-xs font-mono text-background/40",
+                                                    children: "para ti"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                    lineNumber: 134,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                            lineNumber: 128,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "jsx-e6d5695f83c7df5a" + " " + "p-8 lg:p-10 min-h-[280px] flex flex-col justify-center",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "jsx-e6d5695f83c7df5a" + " " + "text-xl lg:text-2xl font-display leading-relaxed text-background/85",
+                                                    children: [
+                                                        "Porque la información pública es tuya.",
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {
+                                                            className: "jsx-e6d5695f83c7df5a"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                            lineNumber: 141,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        "Porque nadie debería tener que buscar",
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {
+                                                            className: "jsx-e6d5695f83c7df5a"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                            lineNumber: 143,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        "entre miles de páginas para saber",
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {
+                                                            className: "jsx-e6d5695f83c7df5a"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                            lineNumber: 145,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        "qué hacen con tu dinero."
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                    lineNumber: 139,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "jsx-e6d5695f83c7df5a" + " " + "mt-6 text-xl lg:text-2xl font-display leading-relaxed text-background",
+                                                    children: "Nosotros lo hacemos por ti."
+                                                }, void 0, false, {
+                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                    lineNumber: 148,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                            lineNumber: 138,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "jsx-e6d5695f83c7df5a" + " " + "px-6 py-4 border-t border-background/10 flex items-center gap-3",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "jsx-e6d5695f83c7df5a" + " " + "w-2 h-2 rounded-full bg-green-400 animate-pulse"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                    lineNumber: 155,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "jsx-e6d5695f83c7df5a" + " " + "text-xs font-mono text-background/40",
+                                                    children: "Transparencia activa"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                                    lineNumber: 156,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                            lineNumber: 154,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                    lineNumber: 126,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
+                                lineNumber: 125,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -722,244 +927,21 @@ function HowItWorksSection() {
                         fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
                         lineNumber: 85,
                         columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "jsx-d0fb98a0b853be6f" + " " + "grid lg:grid-cols-2 gap-16 lg:gap-24",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "jsx-d0fb98a0b853be6f" + " " + "space-y-0",
-                                children: steps.map((step, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        type: "button",
-                                        onClick: ()=>setActiveStep(index),
-                                        className: "jsx-d0fb98a0b853be6f" + " " + `w-full text-left py-8 border-b border-background/10 transition-all duration-500 group ${activeStep === index ? "opacity-100" : "opacity-40 hover:opacity-70"}`,
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-d0fb98a0b853be6f" + " " + "flex items-start gap-6",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "jsx-d0fb98a0b853be6f" + " " + "font-display text-3xl text-background/30",
-                                                    children: step.number
-                                                }, void 0, false, {
-                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                    lineNumber: 115,
-                                                    columnNumber: 19
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "jsx-d0fb98a0b853be6f" + " " + "flex-1",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                            className: "jsx-d0fb98a0b853be6f" + " " + "text-2xl lg:text-3xl font-display mb-3 group-hover:translate-x-2 transition-transform duration-300",
-                                                            children: step.title
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                            lineNumber: 117,
-                                                            columnNumber: 21
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "jsx-d0fb98a0b853be6f" + " " + "text-background/60 leading-relaxed",
-                                                            children: step.description
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                            lineNumber: 120,
-                                                            columnNumber: 21
-                                                        }, this),
-                                                        activeStep === index && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "jsx-d0fb98a0b853be6f" + " " + "mt-4 h-px bg-background/20 overflow-hidden",
-                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                style: {
-                                                                    animation: 'progress 5s linear forwards'
-                                                                },
-                                                                className: "jsx-d0fb98a0b853be6f" + " " + "h-full bg-background w-0"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                                lineNumber: 127,
-                                                                columnNumber: 25
-                                                            }, this)
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                            lineNumber: 126,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                    lineNumber: 116,
-                                                    columnNumber: 19
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                            lineNumber: 114,
-                                            columnNumber: 17
-                                        }, this)
-                                    }, step.number, false, {
-                                        fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                        lineNumber: 106,
-                                        columnNumber: 15
-                                    }, this))
-                            }, void 0, false, {
-                                fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                lineNumber: 104,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "jsx-d0fb98a0b853be6f" + " " + "lg:sticky lg:top-32 self-start",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "jsx-d0fb98a0b853be6f" + " " + "border border-background/10 overflow-hidden",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-d0fb98a0b853be6f" + " " + "px-6 py-4 border-b border-background/10 flex items-center justify-between",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "jsx-d0fb98a0b853be6f" + " " + "flex gap-2",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "jsx-d0fb98a0b853be6f" + " " + "w-3 h-3 rounded-full bg-background/20"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                            lineNumber: 147,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "jsx-d0fb98a0b853be6f" + " " + "w-3 h-3 rounded-full bg-background/20"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                            lineNumber: 148,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "jsx-d0fb98a0b853be6f" + " " + "w-3 h-3 rounded-full bg-background/20"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                            lineNumber: 149,
-                                                            columnNumber: 19
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                    lineNumber: 146,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "jsx-d0fb98a0b853be6f" + " " + "text-xs font-mono text-background/40",
-                                                    children: "pipeline.ts"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                    lineNumber: 151,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                            lineNumber: 145,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-d0fb98a0b853be6f" + " " + "p-8 font-mono text-sm min-h-[280px]",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("pre", {
-                                                className: "jsx-d0fb98a0b853be6f" + " " + "text-background/70",
-                                                children: steps[activeStep].code.split('\n').map((line, lineIndex)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        style: {
-                                                            animationDelay: `${lineIndex * 80}ms`
-                                                        },
-                                                        className: "jsx-d0fb98a0b853be6f" + " " + "leading-loose code-line-reveal",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "jsx-d0fb98a0b853be6f" + " " + "text-background/20 select-none w-8 inline-block",
-                                                                children: lineIndex + 1
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                                lineNumber: 165,
-                                                                columnNumber: 23
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "jsx-d0fb98a0b853be6f" + " " + "inline-flex",
-                                                                children: line.split('').map((char, charIndex)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        style: {
-                                                                            animationDelay: `${lineIndex * 80 + charIndex * 15}ms`
-                                                                        },
-                                                                        className: "jsx-d0fb98a0b853be6f" + " " + "code-char-reveal",
-                                                                        children: char === ' ' ? '\u00A0' : char
-                                                                    }, `${activeStep}-${lineIndex}-${charIndex}`, false, {
-                                                                        fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                                        lineNumber: 168,
-                                                                        columnNumber: 27
-                                                                    }, this))
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                                lineNumber: 166,
-                                                                columnNumber: 23
-                                                            }, this)
-                                                        ]
-                                                    }, `${activeStep}-${lineIndex}`, true, {
-                                                        fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                        lineNumber: 158,
-                                                        columnNumber: 21
-                                                    }, this))
-                                            }, void 0, false, {
-                                                fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                lineNumber: 156,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                            lineNumber: 155,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-d0fb98a0b853be6f" + " " + "px-6 py-4 border-t border-background/10 flex items-center gap-3",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "jsx-d0fb98a0b853be6f" + " " + "w-2 h-2 rounded-full bg-green-400 animate-pulse"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                    lineNumber: 186,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "jsx-d0fb98a0b853be6f" + " " + "text-xs font-mono text-background/40",
-                                                    children: "Activo"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                                    lineNumber: 187,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                            lineNumber: 185,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                    lineNumber: 143,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                                lineNumber: 142,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                        lineNumber: 102,
-                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-                lineNumber: 83,
+                lineNumber: 66,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$landing$2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                id: "d0fb98a0b853be6f",
-                children: "@keyframes progress{0%{width:0%}to{width:100%}}.code-line-reveal.jsx-d0fb98a0b853be6f{opacity:0;animation:.4s cubic-bezier(.22,1,.36,1) forwards lineReveal;transform:translate(-8px)}@keyframes lineReveal{to{opacity:1;transform:translate(0)}}.code-char-reveal.jsx-d0fb98a0b853be6f{opacity:0;filter:blur(8px);animation:.3s cubic-bezier(.22,1,.36,1) forwards charReveal}@keyframes charReveal{to{opacity:1;filter:blur()}}"
+                id: "e6d5695f83c7df5a",
+                children: "@keyframes progress{0%{width:0%}to{width:100%}}"
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {
         fileName: "[project]/landing/components/landing/how-it-works-section.tsx",
-        lineNumber: 65,
+        lineNumber: 48,
         columnNumber: 5
     }, this);
 }

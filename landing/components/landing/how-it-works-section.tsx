@@ -7,33 +7,16 @@ const steps = [
     number: "I",
     title: "Monitoreamos fuentes públicas",
     description: "Rastreamos canales oficiales en YouTube y medios de interés público. Solo datos abiertos y verificables.",
-    code: `monitor.sources({
-  youtube: ['gobmx', 'senado', 'asambleas'],
-  news: 'interes_publico',
-  region: 'mexico'
-})`,
   },
   {
     number: "II",
     title: "Generamos contexto",
     description: "Procesamos videos y noticias para extraer lo relevante. Cada resumen enlaza a su fuente original.",
-    code: `pipeline.analyze({
-  input: 'video_transmision',
-  output: 'resumen_estructurado',
-  include: ['enlace_fuente', 'timestamp']
-})`,
   },
   {
     number: "III",
     title: "Te llega a WhatsApp",
     description: "Resumen, contexto y enlace al material original. Directo a tu teléfono, sin intermediarios.",
-    code: `delivery.send({
-  channel: 'whatsapp',
-  content: resumen,
-  source: enlace_original
-})
-
-// Entregado en segundos`,
   },
 ];
 
@@ -148,43 +131,29 @@ export function HowItWorksSection() {
                   <div className="w-3 h-3 rounded-full bg-background/20" />
                   <div className="w-3 h-3 rounded-full bg-background/20" />
                 </div>
-                <span className="text-xs font-mono text-background/40">pipeline.ts</span>
+                <span className="text-xs font-mono text-background/40">para ti</span>
               </div>
 
-              {/* Code content */}
-              <div className="p-8 font-mono text-sm min-h-[280px]">
-                <pre className="text-background/70">
-                  {steps[activeStep].code.split('\n').map((line, lineIndex) => (
-                    <div 
-                      key={`${activeStep}-${lineIndex}`} 
-                      className="leading-loose code-line-reveal"
-                      style={{ 
-                        animationDelay: `${lineIndex * 80}ms`,
-                      }}
-                    >
-                      <span className="text-background/20 select-none w-8 inline-block">{lineIndex + 1}</span>
-                      <span className="inline-flex">
-                        {line.split('').map((char, charIndex) => (
-                          <span
-                            key={`${activeStep}-${lineIndex}-${charIndex}`}
-                            className="code-char-reveal"
-                            style={{
-                              animationDelay: `${lineIndex * 80 + charIndex * 15}ms`,
-                            }}
-                          >
-                            {char === ' ' ? '\u00A0' : char}
-                          </span>
-                        ))}
-                      </span>
-                    </div>
-                  ))}
-                </pre>
+              {/* Manifesto content */}
+              <div className="p-8 lg:p-10 min-h-[280px] flex flex-col justify-center">
+                <p className="text-xl lg:text-2xl font-display leading-relaxed text-background/85">
+                  Porque la información pública es tuya.
+                  <br />
+                  Porque nadie debería tener que buscar
+                  <br />
+                  entre miles de páginas para saber
+                  <br />
+                  qué hacen con tu dinero.
+                </p>
+                <p className="mt-6 text-xl lg:text-2xl font-display leading-relaxed text-background">
+                  Nosotros lo hacemos por ti.
+                </p>
               </div>
 
               {/* Status */}
               <div className="px-6 py-4 border-t border-background/10 flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                <span className="text-xs font-mono text-background/40">Activo</span>
+                <span className="text-xs font-mono text-background/40">Transparencia activa</span>
               </div>
             </div>
           </div>
@@ -195,32 +164,6 @@ export function HowItWorksSection() {
         @keyframes progress {
           from { width: 0%; }
           to { width: 100%; }
-        }
-        
-        .code-line-reveal {
-          opacity: 0;
-          transform: translateX(-8px);
-          animation: lineReveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        }
-        
-        @keyframes lineReveal {
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        .code-char-reveal {
-          opacity: 0;
-          filter: blur(8px);
-          animation: charReveal 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        }
-        
-        @keyframes charReveal {
-          to {
-            opacity: 1;
-            filter: blur(0);
-          }
         }
       `}</style>
     </section>
