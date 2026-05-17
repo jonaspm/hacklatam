@@ -26,8 +26,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: 'Optimus - Platform to Create',
-  description: 'The creative platform for teams who ship. Build, deploy, and scale with unprecedented velocity.',
+  title: 'No Nos La Hacen — Transparencia e información pública',
+  description: 'Monitoreo de canales oficiales y noticias de interés público. Resúmenes claros con evidencia y fuente original, directo a tu WhatsApp.',
   generator: 'v0.app',
 }
 
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         {children}
         <Analytics />

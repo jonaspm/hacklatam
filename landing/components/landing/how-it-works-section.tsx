@@ -5,38 +5,35 @@ import { useEffect, useRef, useState } from "react";
 const steps = [
   {
     number: "I",
-    title: "Connect your tools",
-    description: "Integrate with your existing stack in minutes. We support 200+ data sources out of the box.",
-    code: `import { optimus } from '@optimus/core'
-
-optimus.connect({
-  source: 'your-database',
-  sync: true
+    title: "Monitoreamos fuentes públicas",
+    description: "Rastreamos canales oficiales en YouTube y medios de interés público. Solo datos abiertos y verificables.",
+    code: `monitor.sources({
+  youtube: ['gobmx', 'senado', 'asambleas'],
+  news: 'interes_publico',
+  region: 'mexico'
 })`,
   },
   {
     number: "II",
-    title: "Build your workflow",
-    description: "Design powerful automations with our visual builder or write code directly.",
-    code: `optimus.workflow('process', {
-  trigger: 'event',
-  actions: [
-    'validate',
-    'transform', 
-    'deliver'
-  ]
+    title: "Generamos contexto",
+    description: "Procesamos videos y noticias para extraer lo relevante. Cada resumen enlaza a su fuente original.",
+    code: `pipeline.analyze({
+  input: 'video_transmision',
+  output: 'resumen_estructurado',
+  include: ['enlace_fuente', 'timestamp']
 })`,
   },
   {
     number: "III",
-    title: "Ship to production",
-    description: "Deploy globally with zero configuration. Your app goes live in under 30 seconds.",
-    code: `optimus.deploy({
-  target: 'production',
-  regions: 'auto'
+    title: "Te llega a WhatsApp",
+    description: "Resumen, contexto y enlace al material original. Directo a tu teléfono, sin intermediarios.",
+    code: `delivery.send({
+  channel: 'whatsapp',
+  content: resumen,
+  source: enlace_original
 })
 
-// Deployed to 12 regions`,
+// Entregado en segundos`,
   },
 ];
 
@@ -88,16 +85,16 @@ export function HowItWorksSection() {
         <div className="mb-16 lg:mb-24">
           <span className="inline-flex items-center gap-3 text-sm font-mono text-background/50 mb-6">
             <span className="w-8 h-px bg-background/30" />
-            Process
+            Proceso
           </span>
           <h2
             className={`text-4xl lg:text-6xl font-display tracking-tight transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Three steps.
+            Tres pasos.
             <br />
-            <span className="text-background/50">Infinite possibilities.</span>
+            <span className="text-background/50">Información conectada.</span>
           </h2>
         </div>
 
@@ -151,7 +148,7 @@ export function HowItWorksSection() {
                   <div className="w-3 h-3 rounded-full bg-background/20" />
                   <div className="w-3 h-3 rounded-full bg-background/20" />
                 </div>
-                <span className="text-xs font-mono text-background/40">workflow.ts</span>
+                <span className="text-xs font-mono text-background/40">pipeline.ts</span>
               </div>
 
               {/* Code content */}
@@ -187,7 +184,7 @@ export function HowItWorksSection() {
               {/* Status */}
               <div className="px-6 py-4 border-t border-background/10 flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                <span className="text-xs font-mono text-background/40">Ready</span>
+                <span className="text-xs font-mono text-background/40">Activo</span>
               </div>
             </div>
           </div>

@@ -4,32 +4,32 @@ import { useEffect, useState } from "react";
 
 const testimonials = [
   {
-    quote: "Optimus transformed our deployment pipeline. What used to take hours now happens in seconds.",
-    author: "Sarah Chen",
-    role: "CTO",
-    company: "Meridian Labs",
-    metric: "10x faster deployments",
+    quote: "Por fin puedo seguir las sesiones del Senado sin ver tres horas de video. El resumen y el enlace me llegan directo.",
+    author: "Mariana Soto",
+    role: "Periodista",
+    company: "Medios independientes",
+    metric: "3h → 5 min de lectura",
   },
   {
-    quote: "The developer experience is unmatched. Our team's productivity has never been higher.",
-    author: "Marcus Webb",
-    role: "Engineering Lead",
-    company: "Flux Systems",
-    metric: "40% more features shipped",
+    quote: "Lo que más valoro es que siempre incluyen la fuente. Puedo verificar cualquier dato en el video original.",
+    author: "Carlos Mendoza",
+    role: "Investigador",
+    company: "Universidad Nacional",
+    metric: "100% con fuente original",
   },
   {
-    quote: "Finally, infrastructure that scales with our ambition. Zero downtime since we switched.",
-    author: "Elena Rodriguez",
-    role: "VP Engineering",
-    company: "Beacon AI",
-    metric: "99.99% uptime",
+    quote: "Monitoreamos gobiernos estatales que antes eran invisibles. La información pública ahora tiene visibilidad.",
+    author: "Ana Beltrán",
+    role: "Directora",
+    company: "Observatorio Cívico",
+    metric: "12 estados monitoreados",
   },
   {
-    quote: "The integrations are seamless. We connected our entire stack in a single afternoon.",
-    author: "James Liu",
-    role: "Founder",
-    company: "Prism Analytics",
-    metric: "50+ integrations used",
+    quote: "Recibo las alertas en WhatsApp y comparto con mi equipo. Acceso a información pública, simplificado.",
+    author: "Roberto Fuentes",
+    role: "Coordinador",
+    company: "Red de Transparencia",
+    metric: "Alertas en tiempo real",
   },
 ];
 
@@ -56,7 +56,7 @@ export function TestimonialsSection() {
         {/* Section Label */}
         <div className="flex items-center gap-4 mb-16">
           <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
-            What people say
+            Voces de la comunidad
           </span>
           <div className="flex-1 h-px bg-foreground/10" />
           <span className="font-mono text-xs text-muted-foreground">
@@ -105,7 +105,7 @@ export function TestimonialsSection() {
               }`}
             >
               <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase block mb-4">
-                Key Result
+                Resultado clave
               </span>
               <p className="font-display text-3xl md:text-4xl text-foreground">
                 {activeTestimonial.metric}
@@ -138,7 +138,7 @@ export function TestimonialsSection() {
         {/* Company Logos Marquee Label */}
         <div className="mt-24 pt-12 border-t border-foreground/10">
           <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase mb-8 text-center">
-            Trusted by forward-thinking teams
+            Quienes confían en acceso a información pública
           </p>
         </div>
       </div>
@@ -148,7 +148,7 @@ export function TestimonialsSection() {
         <div className="flex gap-16 items-center marquee">
           {[...Array(2)].map((_, setIdx) => (
             <div key={setIdx} className="flex gap-16 items-center shrink-0">
-              {["Meridian Labs", "Flux Systems", "Beacon AI", "Prism Analytics", "Nova Tech", "Quantum Corp", "Atlas Digital", "Vertex Labs"].map(
+              {["Observatorio Cívico", "Red de Transparencia", "Medios Independientes", "Universidad Nacional", "Datos Abiertos MX", "Civic Tech LATAM", "Periodismo de Datos", "Acceso a la Info"].map(
                 (company) => (
                   <span
                     key={`${setIdx}-${company}`}

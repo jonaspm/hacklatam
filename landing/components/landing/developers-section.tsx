@@ -5,52 +5,49 @@ import { Copy, Check } from "lucide-react";
 
 const codeExamples = [
   {
-    label: "Install",
-    code: `npm install @optimus/sdk
-
-# or
-yarn add @optimus/sdk
-pnpm add @optimus/sdk`,
-  },
-  {
-    label: "Initialize",
-    code: `import { Optimus } from '@optimus/sdk'
-
-const optimus = new Optimus({
-  apiKey: process.env.OPTIMUS_KEY
+    label: "Monitoreo",
+    code: `pipeline.watch({
+  sources: ['youtube_oficial'],
+  region: 'mexico',
+  topics: ['gobierno', 'asambleas']
 })`,
   },
   {
-    label: "Deploy",
-    code: `const app = await optimus.deploy({
-  name: 'my-app',
-  region: 'auto',
-  scaling: {
-    min: 1,
-    max: 100
-  }
+    label: "Análisis",
+    code: `const resumen = await pipeline.analyze({
+  video: transmision_oficial,
+  format: 'resumen_estructurado',
+  include_source: true
+})`,
+  },
+  {
+    label: "Entrega",
+    code: `await delivery.whatsapp({
+  to: suscriptor,
+  summary: resumen,
+  source_url: video.original
 })
 
-console.log('Live at:', app.url)`,
+// Resumen entregado`,
   },
 ];
 
 const features = [
   { 
-    title: "TypeScript native", 
-    description: "Full type safety with auto-generated types."
+    title: "Procesamiento automático", 
+    description: "Videos de horas convertidos en síntesis en minutos."
   },
   { 
-    title: "Zero config", 
-    description: "Sensible defaults that just work."
+    title: "Fuentes rastreables", 
+    description: "Cada resumen enlaza al material original publicado."
   },
   { 
-    title: "Edge-ready", 
-    description: "Runs anywhere: Node, Deno, Bun, browsers."
+    title: "Alertas en tiempo real", 
+    description: "Nuevas transmisiones y noticias, directo a WhatsApp."
   },
   { 
-    title: "12KB gzipped", 
-    description: "Lightweight with zero dependencies."
+    title: "Cobertura nacional", 
+    description: "Federal, estatal y legislativo en un solo sistema."
   },
 ];
 
@@ -119,16 +116,16 @@ export function DevelopersSection() {
           >
             <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
               <span className="w-8 h-px bg-foreground/30" />
-              For developers
+              Tecnología
             </span>
             <h2 className="text-4xl lg:text-6xl font-display tracking-tight mb-8">
-              Built by devs.
+              Civic tech
               <br />
-              <span className="text-muted-foreground">For devs.</span>
+              <span className="text-muted-foreground">para México.</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              A thoughtfully designed SDK that gets out of your way. 
-              Ship faster with intuitive APIs and exceptional documentation.
+              Infraestructura de monitoreo e inteligencia pública.
+              Automatizamos el acceso a información que ya es tuya por derecho.
             </p>
             
             {/* Features */}
@@ -220,11 +217,11 @@ export function DevelopersSection() {
             {/* Links */}
             <div className="mt-6 flex items-center gap-6 text-sm">
               <a href="#" className="text-foreground hover:underline underline-offset-4">
-                Read the docs
+                Conocer la plataforma
               </a>
               <span className="text-foreground/20">|</span>
               <a href="#" className="text-muted-foreground hover:text-foreground">
-                View on GitHub
+                Metodología
               </a>
             </div>
           </div>
