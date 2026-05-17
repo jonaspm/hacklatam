@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 
-const words = ["Pruebas", "Evidencia", "Voz", "Realidad", "Información"];
+const words = ["Contexto", "Evidencia", "Acceso", "Visibilidad", "Transparencia"];
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -77,9 +77,9 @@ export function HeroSection() {
             className={`text-[clamp(2.4rem,9.6vw,8rem)] font-display leading-[0.9] tracking-tight transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
-            <span className="block" style={{ fontSize: "88.544px" }}>La corrupción vive del silencio.</span>
+            <span className="block" style={{ fontSize: "88.544px" }}>El gobierno publica información.</span>
             <span className="block">
-              Nosotros de{" "}
+              Nosotros la convertimos en{" "}
               <span className="relative inline-block">
                 <span
                   key={wordIndex}
@@ -109,6 +109,8 @@ export function HeroSection() {
             className={`text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-xl transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
           >
+            Monitoreamos canales oficiales en YouTube y noticias de interés público.
+            Resúmenes claros, enlace a la fuente y alertas directo a tu WhatsApp.
           </p>
 
           {/* CTAs */}
@@ -120,7 +122,7 @@ export function HeroSection() {
               size="lg"
               className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
             >
-              Start free trial
+              Recibir resúmenes
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button
@@ -128,7 +130,7 @@ export function HeroSection() {
               variant="outline"
               className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
             >
-              Watch demo
+              Ver cómo funciona
             </Button>
           </div>
         </div>

@@ -3,18 +3,18 @@
 import { useEffect, useState, useRef } from "react";
 
 const integrations = [
-  { name: "GitHub", category: "Version Control" },
-  { name: "Slack", category: "Communication" },
-  { name: "Stripe", category: "Payments" },
-  { name: "PostgreSQL", category: "Database" },
-  { name: "Redis", category: "Cache" },
-  { name: "AWS", category: "Cloud" },
-  { name: "MongoDB", category: "Database" },
-  { name: "Vercel", category: "Hosting" },
-  { name: "Figma", category: "Design" },
-  { name: "Linear", category: "Project Management" },
-  { name: "Notion", category: "Documentation" },
-  { name: "OpenAI", category: "AI/ML" },
+  { name: "YouTube", category: "Canales oficiales" },
+  { name: "WhatsApp", category: "Distribución" },
+  { name: "Gob.mx", category: "Datos públicos" },
+  { name: "Senado", category: "Legislativo" },
+  { name: "Diputados", category: "Legislativo" },
+  { name: "INE", category: "Institucional" },
+  { name: "SHCP", category: "Federal" },
+  { name: "CNDH", category: "Derechos humanos" },
+  { name: "Reforma", category: "Medios" },
+  { name: "Animal Político", category: "Medios" },
+  { name: "Expansión", category: "Medios" },
+  { name: "Procesamiento IA", category: "Análisis" },
 ];
 
 export function IntegrationsSection() {
@@ -44,16 +44,16 @@ export function IntegrationsSection() {
         >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30" />
-            Integrations
+            Fuentes
             <span className="w-8 h-px bg-foreground/30" />
           </span>
           <h2 className="text-4xl lg:text-6xl font-display tracking-tight mb-6">
-            Works with everything
+            Información conectada
             <br />
-            you already use.
+            de múltiples orígenes.
           </h2>
           <p className="text-xl text-muted-foreground">
-            200+ pre-built integrations. Connect your entire stack in minutes.
+            Canales oficiales, medios y datos públicos en un solo flujo de monitoreo.
           </p>
         </div>
 
