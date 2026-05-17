@@ -4,32 +4,22 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-
-const words = ["Contexto", "Evidencia", "Acceso", "Visibilidad", "Transparencia"];
-
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
-  const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setWordIndex((prev) => (prev + 1) % words.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       {/* Mexico map background */}
-      <div className="absolute right-0 top-[80%] -translate-y-1/2 w-[650px] h-[520px] lg:w-[975px] lg:h-[715px] opacity-50 pointer-events-none animate-float">
+      <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
         <img
           src="/images/mexico-map.png"
           alt=""
-          className="w-full h-full object-contain"
+          className="max-w-[85%] max-h-[85%] object-contain opacity-70"
+          style={{ mixBlendMode: "multiply", filter: "contrast(1.6)" }}
         />
       </div>
 
@@ -74,73 +64,28 @@ export function HeroSection() {
         {/* Main headline */}
         <div className="mb-12">
           <h1
-            className={`text-[clamp(2.4rem,9.6vw,8rem)] font-display leading-[0.9] tracking-tight transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            className={`max-w-5xl text-[clamp(1.75rem,4.5vw,3.25rem)] font-display leading-[1.15] tracking-tight transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
-            <span className="block" style={{ fontSize: "88.544px" }}>El gobierno publica información.</span>
-            <span className="block">
-              Nosotros la convertimos en{" "}
-              <span className="relative inline-block">
-                <span
-                  key={wordIndex}
-                  className="inline-flex"
-                >
-                  {words[wordIndex].split("").map((char, i) => (
-                    <span
-                      key={`${wordIndex}-${i}`}
-                      className="inline-block animate-char-in"
-                      style={{
-                        animationDelay: `${i * 50}ms`,
-                      }}
-                    >
-                      {char}
-                    </span>
-                  ))}
-                </span>
-                <span className="absolute -bottom-2 left-0 right-0 h-3 bg-foreground/10" />
-              </span>
-            </span>
+            Monitoreo de canales oficiales del gobierno y noticias relacionadas con corrupción en
+            México, recibe resúmenes directamente a tu WhatsApp.
           </h1>
         </div>
 
-        {/* Description */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-end">
-          <p
-            className={`text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-xl transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-              }`}
+        {/* CTA */}
+        <div
+          className={`flex items-start transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
+        >
+          <Button
+            size="lg"
+            className="bg-foreground hover:bg-foreground/90 text-background px-10 h-16 text-base rounded-full group"
           >
-            Monitoreamos canales oficiales en YouTube y noticias de interés público.
-            Resúmenes claros, enlace a la fuente y alertas directo a tu WhatsApp.
-          </p>
-
-          {/* CTAs */}
-          <div
-            className={`flex flex-col sm:flex-row items-start gap-4 transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-              }`}
-          >
-            <Button
-              size="lg"
-              className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
-            >
-              Recibir resúmenes
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
-            >
-              Ver cómo funciona
-            </Button>
-          </div>
+            Recibir resúmenes
+            <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+          </Button>
         </div>
-
       </div>
-
-
-
-      {/* Scroll indicator */}
-
     </section>
   );
 }
