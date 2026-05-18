@@ -31,7 +31,7 @@ const footerLinks = {
 
 const socialLinks = [
   { name: "X", href: "#" },
-  { name: "WhatsApp", href: "#" },
+  { name: "SMS", href: "#" },
   { name: "LinkedIn", href: "#" },
 ];
 

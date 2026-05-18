@@ -17,7 +17,7 @@ const securityFeatures = [
   {
     icon: Eye,
     title: "Trazabilidad completa",
-    description: "Del canal de origen al resumen en tu WhatsApp. Evidencia conectada en cada paso.",
+    description: "Del canal de origen al resumen en SMS. Evidencia conectada en cada paso.",
   },
   {
     icon: FileCheck,

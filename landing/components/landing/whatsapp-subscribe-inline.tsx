@@ -9,25 +9,38 @@ const ArrowIcon = () => (
 );
 
 export function WhatsAppSubscribeInline() {
+  const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [submitted, setSubmitted] = useState(false);
-  const [focused, setFocused] = useState(false);
+  const [focusedField, setFocusedField] = useState<"name" | "phone" | null>(null);
   const [hovering, setHovering] = useState(false);
+
+  const isValid =
+    name.trim().length >= 2 && phone.replace(/\D/g, "").length >= 10;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (phone.replace(/\D/g, "").length >= 10) {
-      setSubmitted(true);
-    }
+    if (isValid) setSubmitted(true);
   };
 
-  const isValid = phone.replace(/\D/g, "").length >= 10;
+  const inputStyle = (field: "name" | "phone") => ({
+    padding: "0 16px",
+    height: 52,
+    background: "#1a1a1a",
+    border: focusedField === field ? "1px solid #fff" : "1px solid #333",
+    borderRadius: 12,
+    color: "#fff",
+    fontSize: 15,
+    outline: "none",
+    transition: "border-color 0.2s ease",
+    fontFamily: "inherit",
+  });
 
   return (
     <section style={{
-      background: "#fafaf8",
-      borderTop: "1px solid #e8e8e4",
-      borderBottom: "1px solid #e8e8e4",
+      background: "#0a0a0a",
+      borderTop: "1px solid #222",
+      borderBottom: "1px solid #222",
       padding: "56px 24px",
     }}>
       <div style={{
@@ -45,13 +58,13 @@ export function WhatsAppSubscribeInline() {
               fontFamily: '"Instrument Serif", serif',
               fontSize: 22,
               fontStyle: "italic",
-              color: "#1a1a1a",
+              color: "#fff",
               margin: 0,
             }}>
-              ¡Listo, te tenemos!
+              ¡Listo, {name.split(" ")[0]}!
             </p>
-            <p style={{ fontSize: 14, color: "#999", margin: "6px 0 0" }}>
-              Pronto recibirás resúmenes en tu WhatsApp.
+            <p style={{ fontSize: 14, color: "#aaa", margin: "6px 0 0" }}>
+              Pronto recibirás resúmenes por SMS.
             </p>
           </div>
         ) : (
@@ -60,13 +73,13 @@ export function WhatsAppSubscribeInline() {
               fontFamily: '"Instrument Serif", serif',
               fontSize: "clamp(20px, 2.5vw, 26px)",
               fontWeight: 400,
-              color: "#1a1a1a",
+              color: "#fff",
               margin: "0 0 6px",
               lineHeight: 1.2,
             }}>
               Suscríbete al resumen diario.
             </h3>
-            <p style={{ fontSize: 14, color: "#999", margin: 0, lineHeight: 1.6 }}>
+            <p style={{ fontSize: 14, color: "#aaa", margin: 0, lineHeight: 1.6 }}>
               Sin spam · cancela cuando quieras.
             </p>
           </div>
@@ -80,90 +93,89 @@ export function WhatsAppSubscribeInline() {
               flex: 2,
               minWidth: 280,
               display: "flex",
+              flexDirection: "column" as const,
               gap: 10,
-              flexWrap: "wrap" as const,
             }}
           >
-            {/* Country prefix */}
-            <div style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 6,
-              padding: "0 14px",
-              background: "#fff",
-              border: "1px solid #e8e8e4",
-              borderRadius: 12,
-              fontSize: 14,
-              color: "#666",
-              whiteSpace: "nowrap" as const,
-              flexShrink: 0,
-              height: 52,
-            }}>
-              <span style={{ fontSize: 16 }}>🇲🇽</span>
-              <span>+52</span>
-            </div>
-
-            {/* Phone input */}
+            {/* Name row */}
             <input
-              type="tel"
-              placeholder="Tu número de WhatsApp"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              onFocus={() => setFocused(true)}
-              onBlur={() => setFocused(false)}
-              style={{
-                flex: 1,
-                minWidth: 160,
-                padding: "0 16px",
-                height: 52,
-                background: "#fff",
-                border: focused ? "1px solid #1a1a1a" : "1px solid #e8e8e4",
-                borderRadius: 12,
-                color: "#1a1a1a",
-                fontSize: 15,
-                outline: "none",
-                transition: "border-color 0.2s ease",
-                fontFamily: "inherit",
-              }}
+              type="text"
+              placeholder="Tu nombre"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              onFocus={() => setFocusedField("name")}
+              onBlur={() => setFocusedField(null)}
+              style={{ ...inputStyle("name"), width: "100%" }}
             />
 
-            {/* Submit */}
-            <button
-              type="submit"
-              disabled={!isValid}
-              onMouseEnter={() => setHovering(true)}
-              onMouseLeave={() => setHovering(false)}
-              style={{
-                padding: "0 24px",
-                height: 52,
-                background: isValid
-                  ? hovering ? "#333" : "#1a1a1a"
-                  : "#e8e8e4",
-                border: "none",
-                borderRadius: 100,
-                color: isValid ? "#fff" : "#bbb",
-                fontSize: 15,
-                fontWeight: 500,
-                cursor: isValid ? "pointer" : "not-allowed",
+            {/* Phone + button row */}
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" as const }}>
+              {/* Country prefix */}
+              <div style={{
                 display: "flex",
                 alignItems: "center",
-                gap: 8,
-                transition: "all 0.2s ease",
-                fontFamily: "inherit",
+                gap: 6,
+                padding: "0 14px",
+                background: "#1a1a1a",
+                border: "1px solid #333",
+                borderRadius: 12,
+                fontSize: 14,
+                color: "#fff",
                 whiteSpace: "nowrap" as const,
                 flexShrink: 0,
-              }}
-            >
-              Suscribirme
-              <ArrowIcon />
-            </button>
+                height: 52,
+              }}>
+                <span style={{ fontSize: 16 }}>🇲🇽</span>
+                <span>+52</span>
+              </div>
+
+              {/* Phone input */}
+              <input
+                type="tel"
+                placeholder="Tu número de teléfono"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                onFocus={() => setFocusedField("phone")}
+                onBlur={() => setFocusedField(null)}
+                style={{ ...inputStyle("phone"), flex: 1, minWidth: 140 }}
+              />
+
+              {/* Submit */}
+              <button
+                type="submit"
+                disabled={!isValid}
+                onMouseEnter={() => setHovering(true)}
+                onMouseLeave={() => setHovering(false)}
+                style={{
+                  padding: "0 24px",
+                  height: 52,
+                  background: isValid ? (hovering ? "#e0e0e0" : "#fff") : "#222",
+                  border: "none",
+                  borderRadius: 100,
+                  color: isValid ? "#000" : "#555",
+                  fontSize: 15,
+                  fontWeight: 500,
+                  cursor: isValid ? "pointer" : "not-allowed",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 8,
+                  transition: "all 0.2s ease",
+                  fontFamily: "inherit",
+                  whiteSpace: "nowrap" as const,
+                  flexShrink: 0,
+                }}
+              >
+                Suscribirme
+                <ArrowIcon />
+              </button>
+            </div>
           </form>
         )}
       </div>
 
       <style>{`
         input::placeholder {
-          color: #bbb;
+          color: #777;
         }
       `}</style>
     </section>

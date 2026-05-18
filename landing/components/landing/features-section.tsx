@@ -17,7 +17,7 @@ const features = [
   },
   {
     number: "03",
-    title: "Alertas por WhatsApp",
+    title: "Alertas por SMS",
     description: "Recibe el resumen y el enlace al video oficial en tu teléfono. Información conectada, lista para consultar o compartir.",
     visual: "collab",
   },

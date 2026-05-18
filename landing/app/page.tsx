@@ -1,5 +1,4 @@
 import { HeroSection } from "@/components/landing/hero-section";
-import { WhatsAppSubscribeSection } from "@/components/landing/whatsapp-subscribe-section";
 import { LoQueResolvemosSection } from "@/components/landing/lo-que-resolvemos-section";
 import { PorQueLoResolvemosSection } from "@/components/landing/por-que-lo-resolvemos-section";
 import { HowItWorksSection } from "@/components/landing/how-it-works-section";
@@ -11,7 +10,6 @@ export default function Home() {
   return (
     <main className="relative min-h-screen overflow-x-hidden noise-overlay">
       <HeroSection />
-      <WhatsAppSubscribeSection />
       <LoQueResolvemosSection />
       <PorQueLoResolvemosSection />
       <HowItWorksSection />

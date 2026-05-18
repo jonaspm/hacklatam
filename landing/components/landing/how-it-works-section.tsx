@@ -15,7 +15,7 @@ const steps = [
   },
   {
     number: "III",
-    title: "Te llega a WhatsApp",
+    title: "Te llega por SMS",
     description: "Resumen, contexto y enlace al material original. Directo a tu teléfono, sin intermediarios.",
   },
 ];
