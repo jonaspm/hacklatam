@@ -11,7 +11,5 @@
     "status": "struere status"
   },
   "type": "module",
-  "dependencies": {
-    "@tursodatabase/serverless": "^1.1.3"
-  }
+  "dependencies": {}
 }

@@ -6,5 +6,6 @@ export default defineRole({
   description: 'Permissions for the Government Analyst agent',
   policies: [
     { resource: 'user-profile', actions: ['list', 'read'], effect: 'allow' },
+    { resource: 'meeting-summary', actions: ['create', 'read', 'update', 'delete', 'list'], effect: 'allow' },
   ],
 })
