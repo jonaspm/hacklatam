@@ -43,7 +43,7 @@ const features = [
   },
   { 
     title: "Alertas en tiempo real", 
-    description: "Nuevas transmisiones y noticias, directo a WhatsApp."
+    description: "Nuevas transmisiones y noticias, directo por SMS."
   },
   { 
     title: "Cobertura nacional", 

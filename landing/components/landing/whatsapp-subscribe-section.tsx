@@ -75,7 +75,7 @@ export function WhatsAppSubscribeSection() {
             fontSize: 15, color: "#999", margin: 0, lineHeight: 1.7,
             maxWidth: 300, marginLeft: "auto", marginRight: "auto",
           }}>
-            Pronto recibirás resúmenes de transparencia directamente en tu WhatsApp.
+            Pronto recibirás resúmenes de transparencia directamente por SMS.
           </p>
         </div>
         <style>{`
@@ -125,7 +125,7 @@ export function WhatsAppSubscribeSection() {
           letterSpacing: "-0.01em",
         }}>
           Recibe resúmenes en{" "}
-          <span style={{ fontStyle: "italic" }}>tu WhatsApp.</span>
+          <span style={{ fontStyle: "italic" }}>tu SMS.</span>
         </h2>
 
         {/* Description */}
@@ -174,7 +174,7 @@ export function WhatsAppSubscribeSection() {
             {/* Phone input */}
             <input
               type="tel"
-              placeholder="Tu número de WhatsApp"
+              placeholder="Tu número de teléfono"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               onFocus={() => setFocused(true)}

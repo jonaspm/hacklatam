@@ -25,7 +25,7 @@ const testimonials = [
     metric: "12 estados monitoreados",
   },
   {
-    quote: "Recibo las alertas en WhatsApp y comparto con mi equipo. Acceso a información pública, simplificado.",
+    quote: "Recibo las alertas por SMS y comparto con mi equipo. Acceso a información pública, simplificado.",
     author: "Roberto Fuentes",
     role: "Coordinador",
     company: "Red de Transparencia",

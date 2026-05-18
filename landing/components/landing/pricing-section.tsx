@@ -12,7 +12,7 @@ const plans = [
       "Resúmenes semanales",
       "Alertas de canales federales",
       "Enlaces a fuente original",
-      "Acceso por WhatsApp",
+      "Acceso por SMS",
       "Comunidad abierta",
     ],
     cta: "Unirme gratis",
@@ -27,7 +27,7 @@ const plans = [
       "Todos los canales oficiales",
       "Resúmenes de noticias",
       "Cobertura estatal",
-      "Prioridad en WhatsApp",
+      "Prioridad por SMS",
       "Historial de resúmenes",
       "Soporte directo",
     ],
@@ -173,7 +173,7 @@ export function PricingSection() {
 
         {/* Bottom Note */}
         <p className="mt-12 text-center text-sm text-muted-foreground">
-          Todos los planes incluyen enlaces a fuente original y entrega por WhatsApp.{" "}
+          Todos los planes incluyen enlaces a fuente original y entrega por SMS.{" "}
           <a href="#" className="underline underline-offset-4 hover:text-foreground transition-colors">
             Comparar planes
           </a>

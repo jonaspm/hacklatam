@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 
 const integrations = [
   { name: "YouTube", category: "Canales oficiales" },
-  { name: "WhatsApp", category: "Distribución" },
+  { name: "SMS", category: "Distribución" },
   { name: "Gob.mx", category: "Datos públicos" },
   { name: "Senado", category: "Legislativo" },
   { name: "Diputados", category: "Legislativo" },
