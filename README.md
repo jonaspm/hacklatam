@@ -26,7 +26,7 @@ Una pipeline automatizada que:
 | Herramienta | Propósito |
 |-------------|-----------|
 | Vercel | Deploy de la landing page |
-| Struere | Agentes de IA (registro de usuarios, resúmenes de transcripciones) |
+| Struere | Agentes de IA con memoria persistente (registro de usuarios, resúmenes de transcripciones) |
 | Kapsó | Conexión del agente de registro con WhatsApp |
 | Zavu | Envío de resúmenes por SMS |
 | Make | Automatización del flujo diario |
@@ -49,3 +49,6 @@ hacklatam/                # Raíz: proyecto Struere (agentes de IA)
 
 - **Raíz (`/`):** Proyecto Struere que contiene los agentes de IA para registro de usuarios y generación de resúmenes.
 - **`landing/`:** Aplicación Next.js con la landing page desplegada en Vercel.
+
+Ejemplo de resumen guardado en la memoria persistente del agente de IA (inspirado en engram por Gentleman Programming):
+<img width="2534" height="1614" alt="Recording 2026-05-17 at 22 59 53" src="https://github.com/user-attachments/assets/3b89c8d5-b075-4cf9-a4bb-7210f89848fa" />
