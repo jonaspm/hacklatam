@@ -19,6 +19,7 @@ Una pipeline automatizada que:
 - **Video:** https://youtube.com/shorts/ZQIIhBEph8Y?feature=share
 - **Presentación:** https://maple-oak-763.faces.site/p77ahixg5j0f
 - **Sitio Web:** https://hacklatam-rouge.vercel.app/
+- **Make Scenario:** https://us2.make.com/public/shared-scenario/3bj5j26bvB0/integration-http
 
 ## Tech Stack
 
@@ -32,3 +33,19 @@ Una pipeline automatizada que:
 | Next.js | Landing page |
 | OpenRouter | Acceso a miles de modelos de IA |
 | Claude Haiku 4.5 (temperature 0) | Modelo de lenguaje para procesamiento |
+
+## Estructura del Proyecto
+
+```
+hacklatam/                # Raíz: proyecto Struere (agentes de IA)
+├── agents/              # Definición de agentes IA
+├── .claude/             # Configuración y skills de Struere
+├── struere.json         # Configuración principal de Struere
+└── landing/             # Proyecto Next.js de la landing page
+    ├── src/             # Código fuente React
+    ├── public/          # Assets estáticos
+    └── package.json     # Dependencias de Next.js
+```
+
+- **Raíz (`/`):** Proyecto Struere que contiene los agentes de IA para registro de usuarios y generación de resúmenes.
+- **`landing/`:** Aplicación Next.js con la landing page desplegada en Vercel.
