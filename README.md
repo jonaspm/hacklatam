@@ -11,7 +11,7 @@ La información pública en México existe y es legalmente accesible, pero está
 Una pipeline automatizada que:
 
 1. **Ingesta** contenido de fuentes oficiales y medios de comunicación con cobertura de corrupción.
-2. **Procesa** el contenido mediante un modelo de lenguaje para identificar relevancia, extraer hechos clave y generar resúmenes en lenguaje claro.
+2. **Procesa** el contenido mediante un modelo de lenguaje para identificar relevancia, extraer hechos clave y generar resúmenes en lenguaje claro. El agente encargado del resumen diario cuenta con memoria persistente, lo que le permite recordar resúmenes anteriores y vincular información nueva para dar continuidad a temas previamente cubiertos.
 3. **Distribuye** los resúmenes vía SMS a los usuarios registrados, sin requerir app, internet ni instalación.
 
 ## Recursos
@@ -31,3 +31,4 @@ Una pipeline automatizada que:
 | Make | Automatización del flujo diario |
 | Next.js | Landing page |
 | OpenRouter | Acceso a miles de modelos de IA |
+| Claude Haiku 4.5 (temperature 0) | Modelo de lenguaje para procesamiento |
