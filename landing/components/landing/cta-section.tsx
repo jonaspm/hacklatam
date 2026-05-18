@@ -66,6 +66,7 @@ export function CtaSection() {
                   <Button
                     size="lg"
                     className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
+                    onClick={() => document.getElementById('subscribe')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Unirme por SMS
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
@@ -74,6 +75,7 @@ export function CtaSection() {
                     size="lg"
                     variant="outline"
                     className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
+                    onClick={() => document.getElementById('subscribe')?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Recibir alertas
                   </Button>

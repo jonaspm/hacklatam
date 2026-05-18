@@ -216,11 +216,11 @@ export function DevelopersSection() {
             
             {/* Links */}
             <div className="mt-6 flex items-center gap-6 text-sm">
-              <a href="#" className="text-foreground hover:underline underline-offset-4">
+              <a href="#subscribe" className="text-foreground hover:underline underline-offset-4">
                 Conocer la plataforma
               </a>
               <span className="text-foreground/20">|</span>
-              <a href="#" className="text-muted-foreground hover:text-foreground">
+              <a href="#subscribe" className="text-muted-foreground hover:text-foreground">
                 Metodología
               </a>
             </div>

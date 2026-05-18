@@ -7,7 +7,6 @@ const footerLinks = {
   Plataforma: [
     { name: "Capacidades", href: "#features" },
     { name: "Cómo funciona", href: "#how-it-works" },
-    { name: "Membresía", href: "#pricing" },
     { name: "Fuentes", href: "#integrations" },
   ],
   Recursos: [
@@ -49,7 +48,7 @@ export function FooterSection() {
           <div className="grid grid-cols-2 md:grid-cols-6 gap-12 lg:gap-8">
             {/* Brand Column */}
             <div className="col-span-2">
-              <a href="#" className="inline-flex items-center gap-2 mb-6">
+              <a href="#subscribe" className="inline-flex items-center gap-2 mb-6">
                 <span className="text-2xl font-display">No Nos La Hacen</span>
               </a>
 

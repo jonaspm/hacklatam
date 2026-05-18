@@ -10,6 +10,20 @@ const ArrowIcon = () => (
   </svg>
 );
 
+function VideoEmbed() {
+  return (
+    <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+      <iframe
+        className="absolute top-0 left-0 w-full h-full rounded-xl border border-foreground/10"
+        src="https://www.youtube.com/embed/ZQIIhBEph8Y"
+        title="Demo Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  );
+}
+
 function HeroSubscribeForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -23,7 +37,7 @@ function HeroSubscribeForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!isValid) return;
-    const digits = phone.replace(/\D/g, "");
+    const digits = phone.trim().replace(/\D/g, "");
     const msg = encodeURIComponent(`Hola, me llamo ${name}, mi número es +52${digits}`);
     window.open(`https://wa.me/12019085536?text=${msg}`, "_blank");
     setSubmitted(true);
@@ -32,19 +46,19 @@ function HeroSubscribeForm() {
   if (submitted) {
     return (
       <div style={{
-        background: "#0a0a0a",
+        background: "var(--form-bg)",
         borderRadius: 20,
-        border: "1px solid #2a2a2a",
+        border: "1px solid var(--form-border)",
         boxShadow: "0 4px 32px rgba(0,0,0,0.5)",
         padding: "36px 28px",
         textAlign: "center",
       }}>
         <div style={{
           width: 48, height: 48, borderRadius: "50%",
-          background: "#fff",
+          background: "var(--form-text)",
           display: "flex", alignItems: "center", justifyContent: "center",
           margin: "0 auto 20px",
-          color: "#000",
+          color: "var(--form-bg)",
         }}>
           <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
             <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z" />
@@ -55,12 +69,12 @@ function HeroSubscribeForm() {
           fontSize: 24,
           fontStyle: "italic",
           fontWeight: 400,
-          color: "#fff",
+          color: "var(--form-text)",
           margin: "0 0 8px",
         }}>
           ¡Gracias, {name.split(" ")[0]}!
         </p>
-        <p style={{ fontSize: 14, color: "#aaa", margin: 0, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 14, color: "var(--form-placeholder)", margin: 0, lineHeight: 1.6 }}>
           Empezarás a recibir resúmenes pronto.
         </p>
       </div>
@@ -70,10 +84,10 @@ function HeroSubscribeForm() {
   const inputStyle = (field: "name" | "phone") => ({
     width: "100%",
     padding: "14px 16px",
-    background: "#1a1a1a",
-    border: focusedField === field ? "1px solid #fff" : "1px solid #333",
+    background: "var(--form-input-bg)",
+    border: focusedField === field ? "1px solid var(--form-text)" : "1px solid var(--form-border)",
     borderRadius: 12,
-    color: "#fff",
+    color: "var(--form-text)",
     fontSize: 15,
     outline: "none",
     transition: "border-color 0.2s ease",
@@ -85,9 +99,9 @@ function HeroSubscribeForm() {
     <form
       onSubmit={handleSubmit}
       style={{
-        background: "#0a0a0a",
+        background: "var(--form-bg)",
         borderRadius: 20,
-        border: "1px solid #2a2a2a",
+        border: "1px solid var(--form-border)",
         boxShadow: "0 4px 32px rgba(0,0,0,0.5)",
         padding: "28px",
         display: "flex",
@@ -99,8 +113,8 @@ function HeroSubscribeForm() {
       <div style={{
         display: "flex", alignItems: "center", gap: 10, marginBottom: 4,
       }}>
-        <div style={{ width: 24, height: 1, background: "#333" }} />
-        <span style={{ fontSize: 12, fontWeight: 500, color: "#fff", letterSpacing: "0.04em" }}>
+        <div style={{ width: 24, height: 1, background: "var(--form-border)" }} />
+        <span style={{ fontSize: 12, fontWeight: 500, color: "var(--form-text)", letterSpacing: "0.04em" }}>
           ÚNETE AHORA
         </span>
       </div>
@@ -123,11 +137,11 @@ function HeroSubscribeForm() {
           alignItems: "center",
           gap: 6,
           padding: "0 14px",
-          background: "#1a1a1a",
-          border: "1px solid #333",
+          background: "var(--form-input-bg)",
+          border: "1px solid var(--form-border)",
           borderRadius: 12,
           fontSize: 14,
-          color: "#fff",
+          color: "var(--form-text)",
           whiteSpace: "nowrap" as const,
           flexShrink: 0,
           height: 52,
@@ -155,10 +169,10 @@ function HeroSubscribeForm() {
         style={{
           width: "100%",
           padding: "16px 24px",
-          background: isValid ? (hovering ? "#e0e0e0" : "#fff") : "#222",
+          background: isValid ? (hovering ? "var(--form-text)" : "var(--form-text)") : "var(--form-border)",
           border: "none",
           borderRadius: 100,
-          color: isValid ? "#000" : "#555",
+          color: isValid ? "var(--form-bg)" : "var(--form-placeholder)",
           fontSize: 15,
           fontWeight: 500,
           cursor: isValid ? "pointer" : "not-allowed",
@@ -180,7 +194,7 @@ function HeroSubscribeForm() {
       {/* Trust line */}
       <p style={{
         fontSize: 12,
-        color: "#aaa",
+        color: "var(--form-placeholder)",
         textAlign: "center" as const,
         margin: 0,
       }}>
@@ -248,22 +262,17 @@ export function HeroSection() {
               </h1>
             </div>
 
-            <div className={`flex items-start transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-              <Button
-                size="lg"
-                className="bg-foreground hover:bg-foreground/90 text-background px-10 h-16 text-base rounded-full group"
-              >
-                Recibir resúmenes
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </div>
+            
           </div>
 
-          {/* Right column: subscription form */}
+          {/* Right column: video + subscription form */}
           <div
-            className={`w-full lg:w-[420px] lg:flex-shrink-0 transition-all duration-700 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+            className={`w-full lg:w-[480px] lg:flex-shrink-0 transition-all duration-700 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
-            <HeroSubscribeForm />
+            <div className="space-y-4">
+              <VideoEmbed />
+              <HeroSubscribeForm />
+            </div>
           </div>
 
         </div>
@@ -271,7 +280,7 @@ export function HeroSection() {
 
       <style>{`
         input::placeholder {
-          color: #777;
+          color: var(--form-placeholder);
         }
       `}</style>
     </section>

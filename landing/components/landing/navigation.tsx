@@ -8,7 +8,6 @@ const navLinks = [
   { name: "Capacidades", href: "#features" },
   { name: "Cómo funciona", href: "#how-it-works" },
   { name: "Tecnología", href: "#developers" },
-  { name: "Membresía", href: "#pricing" },
 ];
 
 export function Navigation() {
@@ -25,9 +24,9 @@ export function Navigation() {
 
   return (
     <header
-      className={`fixed z-50 transition-all duration-500 ${
+      className={`fixed z-50 transition-all duration-500 pt-[env(safe-area-inset-top)] ${
         isScrolled 
-          ? "top-4 left-4 right-4" 
+          ? "top-2 left-2 right-2" 
           : "top-0 left-0 right-0"
       }`}
     >
@@ -44,7 +43,7 @@ export function Navigation() {
           }`}
         >
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <a href="#subscribe" className="flex items-center gap-2 group">
             <span className={`font-display tracking-tight transition-all duration-500 ${isScrolled ? "text-xl" : "text-2xl"}`}>No Nos La Hacen</span>
           </a>
 
@@ -64,12 +63,10 @@ export function Navigation() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="#" className={`text-foreground/70 hover:text-foreground transition-all duration-500 ${isScrolled ? "text-xs" : "text-sm"}`}>
-              Ingresar
-            </a>
             <Button
               size="sm"
               className={`bg-foreground hover:bg-foreground/90 text-background rounded-full transition-all duration-500 ${isScrolled ? "px-4 h-8 text-xs" : "px-6"}`}
+              onClick={() => document.getElementById('subscribe')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Unirme
             </Button>
@@ -129,15 +126,11 @@ export function Navigation() {
           style={{ transitionDelay: isMobileMenuOpen ? "300ms" : "0ms" }}
           >
             <Button 
-              variant="outline" 
-              className="flex-1 rounded-full h-14 text-base"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Ingresar
-            </Button>
-            <Button 
               className="flex-1 bg-foreground text-background rounded-full h-14 text-base"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                setTimeout(() => document.getElementById('subscribe')?.scrollIntoView({ behavior: 'smooth' }), 300);
+              }}
             >
               Unirme
             </Button>

@@ -30,10 +30,10 @@ export function WhatsAppSubscribeInline() {
   const inputStyle = (field: "name" | "phone") => ({
     padding: "0 16px",
     height: 52,
-    background: "#1a1a1a",
-    border: focusedField === field ? "1px solid #fff" : "1px solid #333",
+    background: "var(--form-input-bg)",
+    border: focusedField === field ? "1px solid var(--form-text)" : "1px solid var(--form-border)",
     borderRadius: 12,
-    color: "#fff",
+    color: "var(--form-text)",
     fontSize: 15,
     outline: "none",
     transition: "border-color 0.2s ease",
@@ -41,10 +41,10 @@ export function WhatsAppSubscribeInline() {
   });
 
   return (
-    <section style={{
-      background: "#0a0a0a",
-      borderTop: "1px solid #222",
-      borderBottom: "1px solid #222",
+    <section id="subscribe" style={{
+      background: "var(--form-bg)",
+      borderTop: "1px solid var(--form-border)",
+      borderBottom: "1px solid var(--form-border)",
       padding: "56px 24px",
     }}>
       <div style={{
@@ -62,12 +62,12 @@ export function WhatsAppSubscribeInline() {
               fontFamily: '"Instrument Serif", serif',
               fontSize: 22,
               fontStyle: "italic",
-              color: "#fff",
+              color: "var(--form-text)",
               margin: 0,
             }}>
               ¡Gracias, {name.split(" ")[0]}!
             </p>
-            <p style={{ fontSize: 14, color: "#aaa", margin: "6px 0 0" }}>
+            <p style={{ fontSize: 14, color: "var(--form-placeholder)", margin: "6px 0 0" }}>
               Empezarás a recibir resúmenes pronto.
             </p>
           </div>
@@ -77,13 +77,13 @@ export function WhatsAppSubscribeInline() {
               fontFamily: '"Instrument Serif", serif',
               fontSize: "clamp(20px, 2.5vw, 26px)",
               fontWeight: 400,
-              color: "#fff",
+              color: "var(--form-text)",
               margin: "0 0 6px",
               lineHeight: 1.2,
             }}>
               Suscríbete al resumen diario.
             </h3>
-            <p style={{ fontSize: 14, color: "#aaa", margin: 0, lineHeight: 1.6 }}>
+            <p style={{ fontSize: 14, color: "var(--form-placeholder)", margin: 0, lineHeight: 1.6 }}>
               Sin spam · cancela cuando quieras.
             </p>
           </div>
@@ -120,11 +120,11 @@ export function WhatsAppSubscribeInline() {
                 alignItems: "center",
                 gap: 6,
                 padding: "0 14px",
-                background: "#1a1a1a",
-                border: "1px solid #333",
+                background: "var(--form-input-bg)",
+                border: "1px solid var(--form-border)",
                 borderRadius: 12,
                 fontSize: 14,
-                color: "#fff",
+                color: "var(--form-text)",
                 whiteSpace: "nowrap" as const,
                 flexShrink: 0,
                 height: 52,
@@ -153,10 +153,10 @@ export function WhatsAppSubscribeInline() {
                 style={{
                   padding: "0 24px",
                   height: 52,
-                  background: isValid ? (hovering ? "#e0e0e0" : "#fff") : "#222",
+                  background: isValid ? (hovering ? "var(--form-text)" : "var(--form-text)") : "var(--form-border)",
                   border: "none",
                   borderRadius: 100,
-                  color: isValid ? "#000" : "#555",
+                  color: isValid ? "var(--form-bg)" : "var(--form-placeholder)",
                   fontSize: 15,
                   fontWeight: 500,
                   cursor: isValid ? "pointer" : "not-allowed",
@@ -181,7 +181,7 @@ export function WhatsAppSubscribeInline() {
 
       <style>{`
         input::placeholder {
-          color: #777;
+          color: var(--form-placeholder);
         }
       `}</style>
     </section>
