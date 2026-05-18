@@ -32,6 +32,7 @@ Una pipeline automatizada que:
 | Make | Automatización del flujo diario |
 | Next.js | Landing page |
 | OpenRouter | Acceso a miles de modelos de IA |
+| YouTube Data API v3 | Monitoreo de canales oficiales del gobierno mexicano para ingesta de contenido |
 | Claude Haiku 4.5 (temperature 0) | Modelo de lenguaje para procesamiento |
 
 ## Estructura del Proyecto
