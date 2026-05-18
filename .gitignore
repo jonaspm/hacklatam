@@ -1,5 +1,7 @@
 node_modules/
 dist/
+landing/.next/
+.next/
 .env
 .env.local
 .env.*.local
